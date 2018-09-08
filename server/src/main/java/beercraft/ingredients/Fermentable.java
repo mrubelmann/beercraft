@@ -1,12 +1,16 @@
 package beercraft.ingredients;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 public class Fermentable implements Ingredient {
     private String id;
     private String name;
     private String notes;
-    private Measurement amount;
-    private double time;
+    private Measurement defaultAmount;
+    private double defaultTimeInMinutes;
+    private double color;
 
+    @JsonValue
     public String getId() {
         return null;
     }
@@ -15,6 +19,7 @@ public class Fermentable implements Ingredient {
         this.id = id;
     }
 
+    @JsonValue
     public String getName() {
         return null;
     }
@@ -23,6 +28,7 @@ public class Fermentable implements Ingredient {
         this.name = name;
     }
 
+    @JsonValue
     public String getNotes() {
         return null;
     }
@@ -31,19 +37,30 @@ public class Fermentable implements Ingredient {
         this.notes = notes;
     }
 
+    @JsonValue
     public Measurement getDefaultAmount() {
-        return null;
+        return defaultAmount;
     }
 
-    public void setDefaultAmount(Measurement amount) {
-        this.amount = amount;
+    public void setDefaultAmount(Measurement defaultAmount) {
+        this.defaultAmount = defaultAmount;
     }
 
+    @JsonValue
     public double getDefaultTimeInMinutes() {
-        return 0;
+        return defaultTimeInMinutes;
     }
 
-    public void setDefaultTimeInMinutes(double time) {
-        this.time = time;
+    public void setDefaultTimeInMinutes(double defaultTimeInMinutes) {
+        this.defaultTimeInMinutes = defaultTimeInMinutes;
+    }
+
+    @JsonValue
+    public double getColor() {
+        return color;
+    }
+
+    public void setColor(double color) {
+        this.color = color;
     }
 }
