@@ -34,12 +34,12 @@ public interface Ingredient {
     /**
      * @return The default amount to use in a recipe
      */
-    Measurement getDefaultAmount();
+    double getDefaultAmount();
 
     /**
      * @param amount The default amount to use in a recipe
      */
-    void setDefaultAmount(Measurement amount);
+    void setDefaultAmount(double amount);
 
     /**
      * @return The default length of time to use the ingredient
