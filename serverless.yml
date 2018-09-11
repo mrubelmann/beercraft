@@ -7,13 +7,26 @@ provider:
   name: aws
   runtime: java8
   region: us-east-2
+  profile: home
+  stage: dev
 
-environment:
-#  INGREDIENTS_TABLE: ${self:service}-${opt:stage, self:provider.stage}-ingredients
-  INGREDIENTS_TABLE: Ingredients
+  environment:
+#   FERMENTABLES_TABLE: ${self:service}-${opt:stage, self:provider.stage}-fermentables
+    FERMENTABLES_TABLE: Fermentables
+
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+    - dynamodb:Query
+    - dynamodb:Scan
+    - dynamodb:GetItem
+    - dynamodb:PutItem
+    - dynamodb:UpdateItem
+    - dynamodb:DeleteItem
+    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.FERMENTABLES_TABLE}"
 
 package:
-  artifact: server/target/beercraft-${opt:stage, self:provider.stage}.jar
+  artifact: server/target/server-${opt:stage, self:provider.stage}.jar
 
 functions:
   index:
@@ -26,7 +39,7 @@ functions:
 
 resources:
   Resources:
-    IngredientsDynamoDbTable:
+    FermentablesDynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:
@@ -41,4 +54,4 @@ resources:
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.INGREDIENTS_TABLE}
+        TableName: ${self:provider.environment.FERMENTABLES_TABLE}
