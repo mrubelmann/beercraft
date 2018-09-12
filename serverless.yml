@@ -34,8 +34,11 @@ functions:
 
     events:
       - http:
-          path: hello
+          path: debug
           method: get
+      - http:
+          path: fermentables
+          method: post
 
 resources:
   Resources:
