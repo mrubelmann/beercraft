@@ -7,10 +7,10 @@ import java.util.Map;
  * An immutable, trimmed down set of data from an HTTP request.
  */
 public class RequestData {
-    protected Map<String, Object> queryStringParameters;
+    protected Map<String, String> queryStringParameters;
     protected String requestBody;
 
-    public RequestData(Map<String, Object> queryStringParameters, String requestBody) {
+    public RequestData(Map<String, String> queryStringParameters, String requestBody) {
         this.queryStringParameters = queryStringParameters;
         this.requestBody = requestBody;
     }
@@ -18,8 +18,8 @@ public class RequestData {
     /**
      * @return A copy of the query string parameters
      */
-    public Map<String, Object> getQueryStringParameters() {
-        return new HashMap<String, Object>(queryStringParameters);
+    public Map<String, String> getQueryStringParameters() {
+        return new HashMap<String, String>(queryStringParameters);
     }
 
     /**

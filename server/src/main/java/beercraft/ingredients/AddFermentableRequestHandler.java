@@ -19,6 +19,7 @@ public class AddFermentableRequestHandler implements RequestHandler {
         // TODO: Deserialize the request body into a Fermentable object.
         Fermentable fermentable = new Fermentable();
         fermentable.setName("Crystal 20L");
+        fermentable.setNotes(requestData.getRequestBody());
 
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
         Query<Fermentable> query = new AddFermentableQuery(databaseClient, fermentable);
