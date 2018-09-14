@@ -1,5 +1,7 @@
 package beercraft;
 
+import java.io.IOException;
+
 public interface RequestHandler {
     /**
      * Handles a request that was dispatched by the main Lambda handler.
@@ -7,5 +9,5 @@ public interface RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    String handleRequest(RequestData requestData);
+    String handleRequest(RequestData requestData) throws IOException;
 }

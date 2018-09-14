@@ -5,6 +5,9 @@ import beercraft.RequestData;
 import beercraft.RequestHandler;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.io.IOException;
 
 public class AddFermentableRequestHandler implements RequestHandler {
     /**
@@ -13,20 +16,18 @@ public class AddFermentableRequestHandler implements RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    public String handleRequest(RequestData requestData) {
+    public String handleRequest(RequestData requestData) throws IOException {
         // TODO: Validate the input.
 
-        // TODO: Deserialize the request body into a Fermentable object.
-        Fermentable fermentable = new Fermentable();
-        fermentable.setName("Crystal 20L");
-        fermentable.setNotes(requestData.getRequestBody());
+        ObjectMapper mapper = new ObjectMapper();
+        String requestBody = requestData.getRequestBody();
+        Fermentable fermentable = mapper.readValue(requestBody, Fermentable.class);
 
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
         Query<Fermentable> query = new AddFermentableQuery(databaseClient, fermentable);
 
-        // TODO: Serialize the output.
         Fermentable output = query.execute();
-
-        return "{ \"Id\": \"" + output.getId() + "\", \"Name\": \"" + output.getName() + "\" }";
+        String responseBody = mapper.writeValueAsString(output);
+        return responseBody;
     }
 }

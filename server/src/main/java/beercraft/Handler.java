@@ -79,10 +79,9 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
             return ApiGatewayResponse.builder().setObjectBody(result).build();
         }
         catch(Exception e) {
-            // TODO: Return something better.
             return ApiGatewayResponse.builder()
                     .setStatusCode(500)
-                    .setObjectBody("Something went wrong.")
+                    .setObjectBody(e.toString())
                     .build();
         }
     }
