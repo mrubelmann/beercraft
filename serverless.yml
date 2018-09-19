@@ -39,6 +39,9 @@ functions:
       - http:
           path: fermentables
           method: post
+      - http:
+          path: fermentables
+          method: get
 
 resources:
   Resources:

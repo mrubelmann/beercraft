@@ -8,8 +8,10 @@ import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.util.List;
+import java.util.Map;
 
-public class AddFermentableRequestHandler implements RequestHandler {
+public class GetAllFermentablesRequestHandler implements RequestHandler {
     /**
      * Handles a request that was dispatched by the main Lambda handler.
      *
@@ -17,16 +19,12 @@ public class AddFermentableRequestHandler implements RequestHandler {
      * @return The response
      */
     public String handleRequest(RequestData requestData) throws IOException {
-        // TODO: Validate the input.
+        AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
+        Query<List<Fermentable>> query = new GetAllFermentablesQuery(databaseClient);
+
+        List<Fermentable> output = query.execute();
 
         ObjectMapper mapper = new ObjectMapper();
-        String requestBody = requestData.getRequestBody();
-        Fermentable fermentable = mapper.readValue(requestBody, Fermentable.class);
-
-        AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
-        Query<Fermentable> query = new AddFermentableQuery(databaseClient, fermentable);
-
-        Fermentable output = query.execute();
         return mapper.writeValueAsString(output);
     }
 }
