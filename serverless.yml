@@ -42,6 +42,9 @@ functions:
       - http:
           path: fermentables
           method: get
+      - http:
+          path: fermentables/{id}
+          method: delete
 
 resources:
   Resources:

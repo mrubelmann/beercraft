@@ -9,10 +9,19 @@ import java.util.Map;
 public class RequestData {
     protected Map<String, String> queryStringParameters;
     protected String requestBody;
+    private Map<String, String> pathParameters;
 
-    public RequestData(Map<String, String> queryStringParameters, String requestBody) {
+    public RequestData(String requestBody, Map<String, String> queryStringParameters, Map<String, String> pathParameters) {
         this.queryStringParameters = queryStringParameters;
         this.requestBody = requestBody;
+        this.pathParameters = pathParameters;
+    }
+
+    /**
+     * @return A copy of the request body
+     */
+    public String getRequestBody() {
+        return new String(requestBody);
     }
 
     /**
@@ -23,9 +32,9 @@ public class RequestData {
     }
 
     /**
-     * @return A copy of the request body
+     * @return A copy of the path parameters
      */
-    public String getRequestBody() {
-        return new String(requestBody);
+    public Map<String, String> getPathParameters() {
+        return new HashMap<String, String>(pathParameters);
     }
 }
