@@ -61,6 +61,9 @@ functions:
       - http:
           path: hops
           method: get
+      - http:
+          path: hops/{id}
+          method: delete
 
 resources:
   Resources:
