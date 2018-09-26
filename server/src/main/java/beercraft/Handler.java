@@ -1,9 +1,6 @@
 package beercraft;
 
-import beercraft.ingredients.AddFermentableRequestHandler;
-import beercraft.ingredients.AddHopsRequestHandler;
-import beercraft.ingredients.DeleteFermentableRequestHandler;
-import beercraft.ingredients.GetAllFermentablesRequestHandler;
+import beercraft.ingredients.*;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import java.util.*;
@@ -40,7 +37,8 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
                 new Endpoint("/fermentables", "POST", AddFermentableRequestHandler.class),
                 new Endpoint("/fermentables", "GET", GetAllFermentablesRequestHandler.class),
                 new Endpoint("/fermentables/{id}", "DELETE", DeleteFermentableRequestHandler.class),
-                new Endpoint("/hops", "POST", AddHopsRequestHandler.class)
+                new Endpoint("/hops", "POST", AddHopsRequestHandler.class),
+                new Endpoint("/hops", "GET", GetAllHopsRequestHandler.class)
         );
     }
 

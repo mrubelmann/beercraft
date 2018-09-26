@@ -58,6 +58,9 @@ functions:
       - http:
           path: hops
           method: post
+      - http:
+          path: hops
+          method: get
 
 resources:
   Resources:
