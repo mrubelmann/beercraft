@@ -13,6 +13,7 @@ provider:
   environment:
 #   FERMENTABLES_TABLE: ${self:service}-${opt:stage, self:provider.stage}-fermentables
     FERMENTABLES_TABLE: Fermentables
+    HOPS_TABLE: Hops
 
   iamRoleStatements:
   - Effect: Allow
@@ -24,6 +25,15 @@ provider:
     - dynamodb:UpdateItem
     - dynamodb:DeleteItem
     Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.FERMENTABLES_TABLE}"
+  - Effect: Allow
+    Action:
+    - dynamodb:Query
+    - dynamodb:Scan
+    - dynamodb:GetItem
+    - dynamodb:PutItem
+    - dynamodb:UpdateItem
+    - dynamodb:DeleteItem
+    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.HOPS_TABLE}"
 
 package:
   artifact: server/target/server-${opt:stage, self:provider.stage}.jar
@@ -45,6 +55,9 @@ functions:
       - http:
           path: fermentables/{id}
           method: delete
+      - http:
+          path: hops
+          method: post
 
 resources:
   Resources:
@@ -64,3 +77,20 @@ resources:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.FERMENTABLES_TABLE}
+    HopsDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+        -
+          AttributeName: Id
+          AttributeType: S
+        KeySchema:
+        -
+          AttributeName: Id
+          KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:provider.environment.HOPS_TABLE}
+
