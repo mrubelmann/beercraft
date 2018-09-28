@@ -1,10 +1,11 @@
 package beercraft.ingredients;
 
+import beercraft.util.DatabaseItem;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperFieldModel.*;
 
 @DynamoDBTable(tableName = "Hops")
-public class Hops implements Ingredient {
+public class Hops implements Ingredient, DatabaseItem {
     private String id;
     private String name;
     private String notes;

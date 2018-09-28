@@ -1,8 +1,9 @@
 package beercraft.ingredients;
 
-import beercraft.Query;
-import beercraft.RequestData;
-import beercraft.RequestHandler;
+import beercraft.util.DeleteQuery;
+import beercraft.util.Query;
+import beercraft.util.RequestData;
+import beercraft.util.RequestHandler;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 
@@ -15,13 +16,13 @@ public class DeleteExtraRequestHandler implements RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    public String handleRequest(RequestData requestData) throws IOException {
+    public String handleRequest(RequestData requestData) throws IOException, InstantiationException, IllegalAccessException {
         // TODO: Validate the input.
 
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
         String id = requestData.getPathParameters().get("id");
-        Query<Boolean> query = new DeleteExtraQuery(databaseClient, id);
 
+        Query<Boolean> query = new DeleteQuery<>(databaseClient, id, Extra.class);
         query.execute();
         return "";
     }

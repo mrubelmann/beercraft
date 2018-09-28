@@ -1,4 +1,4 @@
-package beercraft;
+package beercraft.util;
 
 import java.util.Map;
 

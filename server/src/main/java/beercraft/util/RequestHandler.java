@@ -1,4 +1,4 @@
-package beercraft;
+package beercraft.util;
 
 import java.io.IOException;
 
@@ -9,5 +9,5 @@ public interface RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    String handleRequest(RequestData requestData) throws IOException;
+    String handleRequest(RequestData requestData) throws InstantiationException, IllegalAccessException, IOException;
 }

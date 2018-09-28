@@ -1,8 +1,8 @@
 package beercraft.ingredients;
 
-import beercraft.Query;
-import beercraft.RequestData;
-import beercraft.RequestHandler;
+import beercraft.util.RequestData;
+import beercraft.util.RequestHandler;
+import beercraft.util.UpsertQuery;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,7 +24,7 @@ public class AddFermentableRequestHandler implements RequestHandler {
         Fermentable fermentable = mapper.readValue(requestBody, Fermentable.class);
 
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
-        Query<Fermentable> query = new AddFermentableQuery(databaseClient, fermentable);
+        UpsertQuery<Fermentable> query = new UpsertQuery<>(databaseClient, fermentable);
 
         Fermentable output = query.execute();
         return mapper.writeValueAsString(output);

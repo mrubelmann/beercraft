@@ -1,21 +1,22 @@
-package beercraft.ingredients;
+package beercraft.util;
 
-import beercraft.Query;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBScanExpression;
 
 import java.util.List;
 
-public class GetAllExtrasQuery implements Query<List<Extra>> {
+public class GetAllQuery<T> implements Query<List<T>> {
     protected AmazonDynamoDB databaseClient;
+    private Class<T> itemClass;
 
-    public GetAllExtrasQuery(AmazonDynamoDB databaseClient) {
+    public GetAllQuery(AmazonDynamoDB databaseClient, Class<T> itemClass) {
         this.databaseClient = databaseClient;
+        this.itemClass = itemClass;
     }
 
-    public List<Extra> execute() {
+    public List<T> execute() {
         DynamoDBMapper mapper = new DynamoDBMapper(databaseClient);
-        return mapper.scan(Extra.class, new DynamoDBScanExpression());
+        return mapper.scan(itemClass, new DynamoDBScanExpression());
     }
 }

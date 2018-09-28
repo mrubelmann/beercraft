@@ -1,4 +1,4 @@
-package beercraft;
+package beercraft.ingredients;
 
 public enum MeasurementType {
     Mass,

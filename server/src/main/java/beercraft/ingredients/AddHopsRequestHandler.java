@@ -1,8 +1,8 @@
 package beercraft.ingredients;
 
-import beercraft.Query;
-import beercraft.RequestData;
-import beercraft.RequestHandler;
+import beercraft.util.RequestData;
+import beercraft.util.RequestHandler;
+import beercraft.util.UpsertQuery;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,7 +24,7 @@ public class AddHopsRequestHandler implements RequestHandler {
         Hops hops = mapper.readValue(requestBody, Hops.class);
 
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
-        Query<Hops> query = new AddHopsQuery(databaseClient, hops);
+        UpsertQuery<Hops> query = new UpsertQuery<>(databaseClient, hops);
 
         Hops output = query.execute();
         return mapper.writeValueAsString(output);

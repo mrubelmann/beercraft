@@ -1,4 +1,4 @@
-package beercraft;
+package beercraft.util;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;

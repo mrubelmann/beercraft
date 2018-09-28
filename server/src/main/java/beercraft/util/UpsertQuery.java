@@ -1,21 +1,20 @@
-package beercraft.ingredients;
+package beercraft.util;
 
-import beercraft.Query;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 
-public class AddHopsQuery implements Query<Hops> {
+public class UpsertQuery<T> implements Query<T> {
     protected AmazonDynamoDB databaseClient;
-    protected Hops hops;
+    protected T item;
 
-    public AddHopsQuery(AmazonDynamoDB databaseClient, Hops hops) {
+    public UpsertQuery(AmazonDynamoDB databaseClient, T item) {
         this.databaseClient = databaseClient;
-        this.hops = hops;
+        this.item = item;
     }
 
-    public Hops execute() {
+    public T execute() {
         DynamoDBMapper mapper = new DynamoDBMapper(databaseClient);
-        mapper.save(hops);
-        return hops;
+        mapper.save(item);
+        return item;
     }
 }

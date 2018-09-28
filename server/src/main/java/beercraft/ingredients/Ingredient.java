@@ -2,32 +2,22 @@ package beercraft.ingredients;
 
 public interface Ingredient {
     /**
-     * @return The database record ID
-     */
-    String getId();
-
-    /**
-     * @param id The database record ID
-     */
-    void setId(String id);
-
-    /**
-     * @return The ingredient's name
+     * @return The itemType's name
      */
     String getName();
 
     /**
-     * @param name The ingredient's name
+     * @param name The itemType's name
      */
     void setName(String name);
 
     /**
-     * @return Notes about the ingredient
+     * @return Notes about the itemType
      */
     String getNotes();
 
     /**
-     * @param notes Notes about the ingredient
+     * @param notes Notes about the itemType
      */
     void setNotes(String notes);
 
@@ -42,12 +32,12 @@ public interface Ingredient {
     void setDefaultAmount(double amount);
 
     /**
-     * @return The default length of time to use the ingredient
+     * @return The default length of time to use the itemType
      */
     double getDefaultTimeInMinutes();
 
     /**
-     * @param time The default length of time to use the ingredient
+     * @param time The default length of time to use the itemType
      */
     void setDefaultTimeInMinutes(double time);
 }

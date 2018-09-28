@@ -1,8 +1,8 @@
 package beercraft.ingredients;
 
-import beercraft.Query;
-import beercraft.RequestData;
-import beercraft.RequestHandler;
+import beercraft.util.GetAllQuery;
+import beercraft.util.RequestData;
+import beercraft.util.RequestHandler;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,7 +19,7 @@ public class GetAllHopsRequestHandler implements RequestHandler {
      */
     public String handleRequest(RequestData requestData) throws IOException {
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
-        Query<List<Hops>> query = new GetAllHopsQuery(databaseClient);
+        GetAllQuery<Hops> query = new GetAllQuery<>(databaseClient, Hops.class);
 
         List<Hops> output = query.execute();
 

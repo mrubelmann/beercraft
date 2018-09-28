@@ -1,6 +1,9 @@
 package beercraft;
 
 import beercraft.ingredients.*;
+import beercraft.util.ApiGatewayResponse;
+import beercraft.util.RequestData;
+import beercraft.util.Response;
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestHandler;
 import java.util.*;
@@ -80,7 +83,7 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
             }
 
             // Instantiate a handler for the request.
-            beercraft.RequestHandler handler = (beercraft.RequestHandler)endpoint.handlerClass.newInstance();
+            beercraft.util.RequestHandler handler = (beercraft.util.RequestHandler)endpoint.handlerClass.newInstance();
             RequestData requestData = new RequestData(body, queryParams, pathParams);
 
             // Execute the handler.
