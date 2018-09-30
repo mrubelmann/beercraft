@@ -45,7 +45,10 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
                 new Endpoint("/hops/{id}", "DELETE", DeleteHopsRequestHandler.class),
                 new Endpoint("/extras", "POST", AddExtraRequestHandler.class),
                 new Endpoint("/extras", "GET", GetAllExtrasRequestHandler.class),
-                new Endpoint("/extras/{id}", "DELETE", DeleteExtraRequestHandler.class)
+                new Endpoint("/extras/{id}", "DELETE", DeleteExtraRequestHandler.class),
+                new Endpoint("/yeast", "POST", AddYeastRequestHandler.class),
+                new Endpoint("/yeast", "GET", GetAllYeastRequestHandler.class),
+                new Endpoint("/yeast/{id}", "DELETE", DeleteYeastRequestHandler.class)
         );
     }
 

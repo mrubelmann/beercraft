@@ -15,6 +15,7 @@ provider:
     FERMENTABLES_TABLE: Fermentables
     HOPS_TABLE: Hops
     EXTRAS_TABLE: Extras
+    YEAST_TABLE: Yeast
 
   iamRoleStatements:
   - Effect: Allow
@@ -44,6 +45,15 @@ provider:
     - dynamodb:UpdateItem
     - dynamodb:DeleteItem
     Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.EXTRAS_TABLE}"
+  - Effect: Allow
+    Action:
+    - dynamodb:Query
+    - dynamodb:Scan
+    - dynamodb:GetItem
+    - dynamodb:PutItem
+    - dynamodb:UpdateItem
+    - dynamodb:DeleteItem
+    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.YEAST_TABLE}"
 
 package:
   artifact: server/target/server-${opt:stage, self:provider.stage}.jar
@@ -82,6 +92,15 @@ functions:
           method: get
       - http:
           path: extras/{id}
+          method: delete
+      - http:
+          path: yeast
+          method: post
+      - http:
+          path: yeast
+          method: get
+      - http:
+          path: yeast/{id}
           method: delete
 
 resources:
@@ -134,4 +153,20 @@ resources:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.EXTRAS_TABLE}
+    YeastsDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+        -
+          AttributeName: Id
+          AttributeType: S
+        KeySchema:
+        -
+          AttributeName: Id
+          KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:provider.environment.YEAST_TABLE}
 
