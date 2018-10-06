@@ -1,11 +1,12 @@
 package beercraft.recipes;
 
+import beercraft.util.DatabaseItem;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
 import java.util.List;
 
 @DynamoDBTable(tableName = "Recipes")
-public class Recipe {
+public class Recipe implements DatabaseItem {
     private String id;
     private String name;
     private String description;

@@ -2,6 +2,8 @@ package beercraft;
 
 import beercraft.ingredients.*;
 import beercraft.recipes.AddRecipeRequestHandler;
+import beercraft.recipes.DeleteRecipeRequestHandler;
+import beercraft.recipes.GetAllRecipesRequestHandler;
 import beercraft.util.ApiGatewayResponse;
 import beercraft.util.RequestData;
 import beercraft.util.Response;
@@ -50,7 +52,9 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
                 new Endpoint("/yeast", "POST", AddYeastRequestHandler.class),
                 new Endpoint("/yeast", "GET", GetAllYeastRequestHandler.class),
                 new Endpoint("/yeast/{id}", "DELETE", DeleteYeastRequestHandler.class),
-                new Endpoint("/recipes", "POST", AddRecipeRequestHandler.class)
+                new Endpoint("/recipes", "POST", AddRecipeRequestHandler.class),
+                new Endpoint("/recipes", "GET", GetAllRecipesRequestHandler.class),
+                new Endpoint("/recipes/{id}", "DELETE", DeleteRecipeRequestHandler.class)
         );
     }
 
