@@ -16,6 +16,7 @@ provider:
     HOPS_TABLE: Hops
     EXTRAS_TABLE: Extras
     YEAST_TABLE: Yeast
+    RECIPES_TABLE: Recipes
 
   iamRoleStatements:
   - Effect: Allow
@@ -54,6 +55,15 @@ provider:
     - dynamodb:UpdateItem
     - dynamodb:DeleteItem
     Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.YEAST_TABLE}"
+  - Effect: Allow
+    Action:
+    - dynamodb:Query
+    - dynamodb:Scan
+    - dynamodb:GetItem
+    - dynamodb:PutItem
+    - dynamodb:UpdateItem
+    - dynamodb:DeleteItem
+    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.RECIPES_TABLE}"
 
 package:
   artifact: server/target/server-${opt:stage, self:provider.stage}.jar
@@ -102,6 +112,9 @@ functions:
       - http:
           path: yeast/{id}
           method: delete
+      - http:
+          path: recipes
+          method: post
 
 resources:
   Resources:
@@ -153,7 +166,7 @@ resources:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.EXTRAS_TABLE}
-    YeastsDynamoDbTable:
+    YeastDynamoDbTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:
@@ -169,4 +182,20 @@ resources:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.YEAST_TABLE}
+    RecipesDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+        -
+          AttributeName: Id
+          AttributeType: S
+        KeySchema:
+        -
+          AttributeName: Id
+          KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:provider.environment.RECIPES_TABLE}
 
