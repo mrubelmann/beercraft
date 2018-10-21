@@ -1,0 +1,12 @@
+.recipe-card {
+  min-width: 275;
+  margin: 15px;
+}
+
+.title {
+    font-size: 14;
+}
+
+.pos {
+    margin-bottom: 12;
+}
