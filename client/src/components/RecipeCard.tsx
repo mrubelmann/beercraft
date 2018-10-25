@@ -16,13 +16,10 @@ function RecipeCard(props: RecipeCardProps) {
     return (
         <Card className="recipe-card">
             <CardContent>
-                <Typography variant="h5" component="h2">
+                <Typography variant="h5">
                     {props.name}
                 </Typography>
-                <Typography className="pos" color="textSecondary">
-                    style
-                </Typography>
-                <Typography component="p">
+                <Typography variant="body2" color="textSecondary" paragraph={true}>
                     {props.style}
                 </Typography>
             </CardContent>
