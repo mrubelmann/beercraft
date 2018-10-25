@@ -1,5 +1,5 @@
 import * as React from 'react';
-import './styles/RecipeList.css';
+import '../styles/RecipeList.css';
 
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
