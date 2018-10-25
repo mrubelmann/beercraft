@@ -1,11 +1,7 @@
 import * as React from 'react';
-import '../styles/RecipeList.css';
+import RecipeCard from './RecipeCard';
 
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
+import '../styles/RecipeList.css';
 
 function RecipeList(props: any) {
     const recipes = [
@@ -23,22 +19,9 @@ function RecipeList(props: any) {
 
     return (
         recipes.map((recipe, i) => (
-            <Card key={i} className="recipe-card">
-                <CardContent>
-                    <Typography variant="h5" component="h2">
-                        {recipe.name}
-                    </Typography>
-                    <Typography className="pos" color="textSecondary">
-                        style
-                    </Typography>
-                    <Typography component="p">
-                        {recipe.style}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small">Details</Button>
-                </CardActions>
-            </Card>
+            <div key={i} className="recipe-list-item">
+                <RecipeCard name={recipe.name} style={recipe.style} />
+            </div>
         ))
     );
 }
