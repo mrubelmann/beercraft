@@ -17,6 +17,7 @@ provider:
     EXTRAS_TABLE: Extras
     YEAST_TABLE: Yeast
     RECIPES_TABLE: Recipes
+    STYLES_TABLE: Styles
 
   iamRoleStatements:
   - Effect: Allow
@@ -64,6 +65,15 @@ provider:
     - dynamodb:UpdateItem
     - dynamodb:DeleteItem
     Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.RECIPES_TABLE}"
+  - Effect: Allow
+    Action:
+    - dynamodb:Query
+    - dynamodb:Scan
+    - dynamodb:GetItem
+    - dynamodb:PutItem
+    - dynamodb:UpdateItem
+    - dynamodb:DeleteItem
+    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.STYLES_TABLE}"
 
 package:
   artifact: server/target/server-${opt:stage, self:provider.stage}.jar
@@ -120,6 +130,15 @@ functions:
           method: get
       - http:
           path: recipes/{id}
+          method: delete
+      - http:
+          path: styles
+          method: post
+      - http:
+          path: styles
+          method: get
+      - http:
+          path: styles/{id}
           method: delete
 
 resources:
@@ -204,4 +223,20 @@ resources:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
         TableName: ${self:provider.environment.RECIPES_TABLE}
+    StylesDynamoDbTable:
+      Type: 'AWS::DynamoDB::Table'
+      DeletionPolicy: Retain
+      Properties:
+        AttributeDefinitions:
+        -
+          AttributeName: Id
+          AttributeType: S
+        KeySchema:
+        -
+          AttributeName: Id
+          KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1
+        TableName: ${self:provider.environment.STYLES_TABLE}
 
