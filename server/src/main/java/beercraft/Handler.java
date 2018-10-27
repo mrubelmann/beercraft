@@ -39,21 +39,27 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
     public Handler() {
         this.endpoints = Arrays.asList(
                 new Endpoint("/fermentables", "POST", AddFermentableRequestHandler.class),
+                new Endpoint("/fermentables/{id}", "PUT", AddFermentableRequestHandler.class),
                 new Endpoint("/fermentables", "GET", GetAllFermentablesRequestHandler.class),
                 new Endpoint("/fermentables/{id}", "DELETE", DeleteFermentableRequestHandler.class),
                 new Endpoint("/hops", "POST", AddHopsRequestHandler.class),
+                new Endpoint("/hops/{id}", "PUT", AddHopsRequestHandler.class),
                 new Endpoint("/hops", "GET", GetAllHopsRequestHandler.class),
                 new Endpoint("/hops/{id}", "DELETE", DeleteHopsRequestHandler.class),
                 new Endpoint("/extras", "POST", AddExtraRequestHandler.class),
+                new Endpoint("/extras/{id}", "PUT", AddExtraRequestHandler.class),
                 new Endpoint("/extras", "GET", GetAllExtrasRequestHandler.class),
                 new Endpoint("/extras/{id}", "DELETE", DeleteExtraRequestHandler.class),
                 new Endpoint("/yeast", "POST", AddYeastRequestHandler.class),
+                new Endpoint("/yeast/{id}", "PUT", AddYeastRequestHandler.class),
                 new Endpoint("/yeast", "GET", GetAllYeastRequestHandler.class),
                 new Endpoint("/yeast/{id}", "DELETE", DeleteYeastRequestHandler.class),
                 new Endpoint("/recipes", "POST", AddRecipeRequestHandler.class),
+                new Endpoint("/recipes/{id}", "PUT", AddRecipeRequestHandler.class),
                 new Endpoint("/recipes", "GET", GetAllRecipesRequestHandler.class),
                 new Endpoint("/recipes/{id}", "DELETE", DeleteRecipeRequestHandler.class),
                 new Endpoint("/styles", "POST", AddStyleRequestHandler.class),
+                new Endpoint("/styles/{id}", "PUT", UpdateStyleRequestHandler.class),
                 new Endpoint("/styles", "GET", GetAllStylesRequestHandler.class),
                 new Endpoint("/styles/{id}", "DELETE", DeleteStyleRequestHandler.class)
         );

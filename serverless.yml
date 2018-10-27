@@ -86,54 +86,78 @@ functions:
       - http:
           path: debug
           method: get
+
       - http:
           path: fermentables
           method: post
+      - http:
+          path: fermentables/{id}
+          method: put
       - http:
           path: fermentables
           method: get
       - http:
           path: fermentables/{id}
           method: delete
+
       - http:
           path: hops
           method: post
+      - http:
+          path: hops/{id}
+          method: put
       - http:
           path: hops
           method: get
       - http:
           path: hops/{id}
           method: delete
+
       - http:
           path: extras
           method: post
+      - http:
+          path: extras/{id}
+          method: put
       - http:
           path: extras
           method: get
       - http:
           path: extras/{id}
           method: delete
+
       - http:
           path: yeast
           method: post
+      - http:
+          path: yeast/{id}
+          method: put
       - http:
           path: yeast
           method: get
       - http:
           path: yeast/{id}
           method: delete
+
       - http:
           path: recipes
           method: post
+      - http:
+          path: recipes/{id}
+          method: put
       - http:
           path: recipes
           method: get
       - http:
           path: recipes/{id}
           method: delete
+
       - http:
           path: styles
           method: post
+      - http:
+          path: styles/{id}
+          method: put
       - http:
           path: styles
           method: get
