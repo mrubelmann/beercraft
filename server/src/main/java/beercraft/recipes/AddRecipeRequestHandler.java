@@ -27,6 +27,6 @@ public class AddRecipeRequestHandler implements RequestHandler {
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
         UpsertQuery<Recipe> query = new UpsertQuery<>(databaseClient, recipe);
 
-        return new Response(mapper.writeValueAsString(query.execute()) );
+        return new Response(query.execute());
     }
 }
