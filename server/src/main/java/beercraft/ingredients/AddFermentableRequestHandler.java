@@ -2,6 +2,7 @@ package beercraft.ingredients;
 
 import beercraft.util.RequestData;
 import beercraft.util.RequestHandler;
+import beercraft.util.Response;
 import beercraft.util.UpsertQuery;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -16,7 +17,7 @@ public class AddFermentableRequestHandler implements RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    public String handleRequest(RequestData requestData) throws IOException {
+    public Response handleRequest(RequestData requestData) throws IOException {
         // TODO: Validate the input.
 
         ObjectMapper mapper = new ObjectMapper();
@@ -27,6 +28,6 @@ public class AddFermentableRequestHandler implements RequestHandler {
         UpsertQuery<Fermentable> query = new UpsertQuery<>(databaseClient, fermentable);
 
         Fermentable output = query.execute();
-        return mapper.writeValueAsString(output);
+        return new Response(output);
     }
 }

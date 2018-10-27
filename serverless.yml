@@ -84,10 +84,6 @@ functions:
 
     events:
       - http:
-          path: debug
-          method: get
-
-      - http:
           path: fermentables
           method: post
       - http:

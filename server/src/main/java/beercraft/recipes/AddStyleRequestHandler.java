@@ -2,6 +2,7 @@ package beercraft.recipes;
 
 import beercraft.util.RequestData;
 import beercraft.util.RequestHandler;
+import beercraft.util.Response;
 import beercraft.util.UpsertQuery;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
@@ -16,7 +17,7 @@ public class AddStyleRequestHandler implements RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    public String handleRequest(RequestData requestData) throws IOException, InstantiationException, IllegalAccessException {
+    public Response handleRequest(RequestData requestData) throws IOException, InstantiationException, IllegalAccessException {
         // TODO: Validate the input.
 
         ObjectMapper mapper = new ObjectMapper();
@@ -26,6 +27,6 @@ public class AddStyleRequestHandler implements RequestHandler {
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
         UpsertQuery<Style> query = new UpsertQuery<>(databaseClient, style);
 
-        return mapper.writeValueAsString(query.execute());
+        return new Response(query.execute());
     }
 }

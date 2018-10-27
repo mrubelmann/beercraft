@@ -80,12 +80,6 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
             String body = (String)input.get("body");
             Map<String, String> pathParams = (Map<String, String>)input.get("pathParameters");
 
-            // TODO: Remove this.  It's just for testing.
-            if (resource.contains("debug")) {
-                Response responseBody = new Response("Time to brew some beer!", input);
-                return ApiGatewayResponse.builder().setObjectBody(responseBody).build();
-            }
-
             // See if the method and route match one of the predefined endpoints.
             Endpoint endpoint = endpoints.stream()
                     .filter(x -> x.getMethod().equals(method) && x.getResource().equals(resource))
@@ -103,14 +97,18 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
             RequestData requestData = new RequestData(body, queryParams, pathParams);
 
             // Execute the handler.
-            String result = handler.handleRequest(requestData);
-            return ApiGatewayResponse.builder().setRawBody(result).build();
+            Response response = handler.handleRequest(requestData);
+            return ApiGatewayResponse.builder()
+                    .setObjectBody(response.getBody())
+                    .setStatusCode(response.getStatusCode())
+                    .build();
         }
         catch(Exception e) {
             return ApiGatewayResponse.builder()
-                    .setStatusCode(500)
                     .setObjectBody(e.toString())
+                    .setStatusCode(500)
                     .build();
         }
     }
 }
+

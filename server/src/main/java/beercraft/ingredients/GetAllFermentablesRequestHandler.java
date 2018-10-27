@@ -3,6 +3,7 @@ package beercraft.ingredients;
 import beercraft.util.GetAllQuery;
 import beercraft.util.RequestData;
 import beercraft.util.RequestHandler;
+import beercraft.util.Response;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
 import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,13 +18,13 @@ public class GetAllFermentablesRequestHandler implements RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    public String handleRequest(RequestData requestData) throws IOException {
+    public Response handleRequest(RequestData requestData) throws IOException {
         AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
         GetAllQuery<Fermentable> query = new GetAllQuery<>(databaseClient, Fermentable.class);
 
         List<Fermentable> output = query.execute();
 
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.writeValueAsString(output);
+        return new Response(output);
     }
 }
