@@ -1,12 +1,6 @@
 package beercraft.ingredients;
 
-import beercraft.util.RequestData;
-import beercraft.util.RequestHandler;
-import beercraft.util.Response;
-import beercraft.util.UpsertQuery;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
-import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import beercraft.util.*;
 
 import java.io.IOException;
 
@@ -20,14 +14,6 @@ public class AddYeastRequestHandler implements RequestHandler {
     public Response handleRequest(RequestData requestData) throws IOException {
         // TODO: Validate the input.
 
-        ObjectMapper mapper = new ObjectMapper();
-        String requestBody = requestData.getRequestBody();
-        Yeast yeast = mapper.readValue(requestBody, Yeast.class);
-
-        AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
-        UpsertQuery<Yeast> query = new UpsertQuery<>(databaseClient, yeast);
-
-        Yeast output = query.execute();
-        return new Response(output);
+        return new AddItemRequestHandler(Yeast.class).handleRequest(requestData);
     }
 }
