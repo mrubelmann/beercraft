@@ -20,24 +20,4 @@ public interface Ingredient {
      * @param notes Notes about the itemType
      */
     void setNotes(String notes);
-
-    /**
-     * @return The default amount to use in a recipe
-     */
-    double getDefaultAmount();
-
-    /**
-     * @param amount The default amount to use in a recipe
-     */
-    void setDefaultAmount(double amount);
-
-    /**
-     * @return The default length of time to use the itemType
-     */
-    double getDefaultTimeInMinutes();
-
-    /**
-     * @param time The default length of time to use the itemType
-     */
-    void setDefaultTimeInMinutes(double time);
 }

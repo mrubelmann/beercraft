@@ -1,16 +1,26 @@
 package beercraft.util;
 
 /**
- * An interface representing something that has a string based ID.
+ * An interface representing something that can be a record in DynamoDB.  That is, it has a partition key and sort key.
  */
 public interface DatabaseItem {
     /**
-     * @return The ID
+     * @return The partition key
      */
-    String getId();
+    String getPartitionKey();
 
     /**
-     * @param id The ID
+     * @param partitionKey The partition key
      */
-    void setId(String id);
+    void setPartitionKey(String partitionKey);
+
+    /**
+     * @return The sort key
+     */
+    String getSortKey();
+
+    /**
+     * @param sortKey The sort key
+     */
+    void setSortKey(String sortKey);
 }

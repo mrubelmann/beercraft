@@ -1,9 +1,5 @@
 package beercraft;
 
-import beercraft.ingredients.*;
-import beercraft.recipes.AddRecipeRequestHandler;
-import beercraft.recipes.DeleteRecipeRequestHandler;
-import beercraft.recipes.GetAllRecipesRequestHandler;
 import beercraft.util.ApiGatewayResponse;
 import beercraft.util.RequestData;
 import beercraft.util.Response;
@@ -40,21 +36,6 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
 
     public Handler() {
         this.endpoints = Arrays.asList(
-                new Endpoint("/fermentables", "POST", AddFermentableRequestHandler.class),
-                new Endpoint("/fermentables", "GET", GetAllFermentablesRequestHandler.class),
-                new Endpoint("/fermentables/{id}", "DELETE", DeleteFermentableRequestHandler.class),
-                new Endpoint("/hops", "POST", AddHopsRequestHandler.class),
-                new Endpoint("/hops", "GET", GetAllHopsRequestHandler.class),
-                new Endpoint("/hops/{id}", "DELETE", DeleteHopsRequestHandler.class),
-                new Endpoint("/extras", "POST", AddExtraRequestHandler.class),
-                new Endpoint("/extras", "GET", GetAllExtrasRequestHandler.class),
-                new Endpoint("/extras/{id}", "DELETE", DeleteExtraRequestHandler.class),
-                new Endpoint("/yeast", "POST", AddYeastRequestHandler.class),
-                new Endpoint("/yeast", "GET", GetAllYeastRequestHandler.class),
-                new Endpoint("/yeast/{id}", "DELETE", DeleteYeastRequestHandler.class),
-                new Endpoint("/recipes", "POST", AddRecipeRequestHandler.class),
-                new Endpoint("/recipes", "GET", GetAllRecipesRequestHandler.class),
-                new Endpoint("/recipes/{id}", "DELETE", DeleteRecipeRequestHandler.class)
         );
     }
 

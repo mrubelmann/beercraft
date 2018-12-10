@@ -11,59 +11,18 @@ provider:
   stage: dev
 
   environment:
-#   FERMENTABLES_TABLE: ${self:service}-${opt:stage, self:provider.stage}-fermentables
-    FERMENTABLES_TABLE: Fermentables
-    HOPS_TABLE: Hops
-    EXTRAS_TABLE: Extras
-    YEAST_TABLE: Yeast
-    RECIPES_TABLE: Recipes
+    #UBER_TABLE: ${self:service}-${opt:stage, self:provider.stage}
+    UBER_TABLE: UberTable
 
   iamRoleStatements:
   - Effect: Allow
     Action:
     - dynamodb:Query
-    - dynamodb:Scan
     - dynamodb:GetItem
     - dynamodb:PutItem
     - dynamodb:UpdateItem
     - dynamodb:DeleteItem
-    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.FERMENTABLES_TABLE}"
-  - Effect: Allow
-    Action:
-    - dynamodb:Query
-    - dynamodb:Scan
-    - dynamodb:GetItem
-    - dynamodb:PutItem
-    - dynamodb:UpdateItem
-    - dynamodb:DeleteItem
-    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.HOPS_TABLE}"
-  - Effect: Allow
-    Action:
-    - dynamodb:Query
-    - dynamodb:Scan
-    - dynamodb:GetItem
-    - dynamodb:PutItem
-    - dynamodb:UpdateItem
-    - dynamodb:DeleteItem
-    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.EXTRAS_TABLE}"
-  - Effect: Allow
-    Action:
-    - dynamodb:Query
-    - dynamodb:Scan
-    - dynamodb:GetItem
-    - dynamodb:PutItem
-    - dynamodb:UpdateItem
-    - dynamodb:DeleteItem
-    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.YEAST_TABLE}"
-  - Effect: Allow
-    Action:
-    - dynamodb:Query
-    - dynamodb:Scan
-    - dynamodb:GetItem
-    - dynamodb:PutItem
-    - dynamodb:UpdateItem
-    - dynamodb:DeleteItem
-    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.RECIPES_TABLE}"
+    Resource: "arn:aws:dynamodb:${opt:region, self:provider.region}:*:table/${self:provider.environment.UBER_TABLE}"
 
 package:
   artifact: server/target/server-${opt:stage, self:provider.stage}.jar
@@ -73,135 +32,29 @@ functions:
     handler: beercraft.Handler
 
     events:
-      - http:
-          path: debug
-          method: get
-      - http:
-          path: fermentables
-          method: post
-      - http:
-          path: fermentables
-          method: get
-      - http:
-          path: fermentables/{id}
-          method: delete
-      - http:
-          path: hops
-          method: post
-      - http:
-          path: hops
-          method: get
-      - http:
-          path: hops/{id}
-          method: delete
-      - http:
-          path: extras
-          method: post
-      - http:
-          path: extras
-          method: get
-      - http:
-          path: extras/{id}
-          method: delete
-      - http:
-          path: yeast
-          method: post
-      - http:
-          path: yeast
-          method: get
-      - http:
-          path: yeast/{id}
-          method: delete
-      - http:
-          path: recipes
-          method: post
-      - http:
-          path: recipes
-          method: get
-      - http:
-          path: recipes/{id}
-          method: delete
 
 resources:
   Resources:
-    FermentablesDynamoDbTable:
+    UberTable:
       Type: 'AWS::DynamoDB::Table'
       DeletionPolicy: Retain
       Properties:
         AttributeDefinitions:
         -
-          AttributeName: Id
+          AttributeName: PK
+          AttributeType: S
+        -
+          AttributeName: SK
           AttributeType: S
         KeySchema:
         -
-          AttributeName: Id
+          AttributeName: PK
           KeyType: HASH
+        -
+          AttributeName: SK
+          KeyType: RANGE
         ProvisionedThroughput:
           ReadCapacityUnits: 1
           WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.FERMENTABLES_TABLE}
-    HopsDynamoDbTable:
-      Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
-      Properties:
-        AttributeDefinitions:
-        -
-          AttributeName: Id
-          AttributeType: S
-        KeySchema:
-        -
-          AttributeName: Id
-          KeyType: HASH
-        ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.HOPS_TABLE}
-    ExtrasDynamoDbTable:
-      Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
-      Properties:
-        AttributeDefinitions:
-        -
-          AttributeName: Id
-          AttributeType: S
-        KeySchema:
-        -
-          AttributeName: Id
-          KeyType: HASH
-        ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.EXTRAS_TABLE}
-    YeastDynamoDbTable:
-      Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
-      Properties:
-        AttributeDefinitions:
-        -
-          AttributeName: Id
-          AttributeType: S
-        KeySchema:
-        -
-          AttributeName: Id
-          KeyType: HASH
-        ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.YEAST_TABLE}
-    RecipesDynamoDbTable:
-      Type: 'AWS::DynamoDB::Table'
-      DeletionPolicy: Retain
-      Properties:
-        AttributeDefinitions:
-        -
-          AttributeName: Id
-          AttributeType: S
-        KeySchema:
-        -
-          AttributeName: Id
-          KeyType: HASH
-        ProvisionedThroughput:
-          ReadCapacityUnits: 1
-          WriteCapacityUnits: 1
-        TableName: ${self:provider.environment.RECIPES_TABLE}
+        TableName: ${self:provider.environment.UBER_TABLE}
 
