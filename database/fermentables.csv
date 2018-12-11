@@ -1,0 +1,348 @@
+PK,SK,Name,Notes,Color,Type,Yield,LateBoilAddition,Origin,Supplier,CoarseFineDiff,Moisture,DiastaticPower,Protein,MaxInBatch,RecommendMash,Mashed
+ingredient,fermentable_1,Acid Malt,,3,Grain,58.7,FALSE,Germany,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_2,Amber Malt,,22,Grain,75,FALSE,United Kingdom,,0,0,0,0,20,TRUE,TRUE
+ingredient,fermentable_3,Aromatic Malt,"Used at rates of up to 10%, Aromatic malt will lend a distinct, almost exaggerated malt aroma and flavor to the finished Ales and Lagers. Aromatic malt also has a rich color and is high in diastatic power for aid in starch conversion. D/C Aromatic malt. As the name suggests, adds aromatics to a beer.",26,Grain,78,FALSE,Belgium,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_4,Barley Hulls,,0,Adjunct,0,FALSE,US,,0,0,0,0,5,FALSE,FALSE
+ingredient,fermentable_5,"Barley, Flaked",Adds proteins to promote hean retention and mouth feel. Commonly used Dry Stouts.,2,Grain,70,FALSE,US,,0,0,0,0,20,TRUE,TRUE
+ingredient,fermentable_6,"Barley, Raw",,2,Grain,60.9,FALSE,US,,0,0,0,0,15,TRUE,TRUE
+ingredient,fermentable_7,"Barley, Torrefied",,2,Grain,79,FALSE,US,,0,0,0,0,40,TRUE,TRUE
+ingredient,fermentable_8,Biscuit Malt,"Biscuit is a unique malt thats lightly roasted, lending the subtle properties of black and chocolate malts. Used at the rate of 3 to 15 %, it is designed to improve the bread and biscuits, or toasted flavor and aroma characteristics to Lagers and Ales.",23,Grain,79,FALSE,Belgium,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_9,Black (Patent) Malt,"The darkest of all malts, use sparingly to add deep color and roast-charcoal flavor. Use no more than 1 to 3%. Best used in trace amounts only, for color. Almost any contribution that Black Patent gives to beer can be obtained from using another malt with less harsh flavor impacts.",500,Grain,55,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_10,Black Barley (Roast Barley),"Use 10 to 12% to impart a distinct, roasted flavor to Stouts. Other dark beers also benefit from smaller quantities (2 - 6%).",500,Grain,55,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_11,Briess - 2 Row Brewers Malt,"DP 140. Base malt for all beer styles.  Contributes light straw color.  Slightly higher yield than 6-Row Malt.  Slightly lower protein than 6-Row Malt.  Malted in small batches, making it an excellent fit for small batch craft brewing.",1.8,Grain,80.5,FALSE,US,Briess,1,4.2,140,11.5,100,TRUE,TRUE
+ingredient,fermentable_12,Briess - 2 Row Carapils Malt,"Use up to 5% for increased foam, improved head retention and enhanced mouthfeel in any beer style.",1.5,Grain,75,FALSE,US,Briess,1,6.5,0,0,5,FALSE,FALSE
+ingredient,fermentable_13,Briess - 6 Row Brewers Malt,DP 180. Base malt for all beer styles. Contributes light straw color. More husk than 2-Row Malt. Higher enzymes than 2-Row malt. Well suited for high adjunct brewing.,1.8,Grain,78,FALSE,US,Briess,1.5,4.7,180,12,100,TRUE,TRUE
+ingredient,fermentable_14,Briess - Aromatic Malt,DP 20. Deep golden with orange hues.,20,Grain,77,FALSE,US,Briess,1,2.5,20,11.7,50,TRUE,TRUE
+ingredient,fermentable_15,Briess - Ashburne Mild Malt,"DP 65. 2-Row specialty base malt.  Use as a base malt or high percentage specialty malt.  Typically used in Mild Ale, Brown Ale, Belgian Ale and Barley Wine.  Slightly darker with a higher dextrin level than Pale Ale Malt.  Will lend a higher residual maltiness/ mouthfeel.",5.3,Grain,79,FALSE,US,Briess,2,3.5,65,11.7,50,TRUE,TRUE
+ingredient,fermentable_16,Briess - Black Barley,"Contributes color and rich, sharp flavor characteristic of Stouts and some Porters. Impacts foam color.",500,Grain,55,FALSE,US,Briess,1,6,0,0,7,FALSE,FALSE
+ingredient,fermentable_17,Briess - Black Malt,Color adjustment for all beer styles. Use with other roasted malts for mild flavored dark beers. Has little impact on foam color.,500,Grain,55,FALSE,US,Briess,1,6,0,0,10,FALSE,FALSE
+ingredient,fermentable_18,Briess - Black Malted Barley Flour,Color adjustment for all beer styles.,500,Grain,55,FALSE,US,Briess,1,6,0,0,10,FALSE,FALSE
+ingredient,fermentable_19,Briess - Blackprinz Malt,Bitterless black malt that can be used in any recipe calling for debittered black malt. Blackprinz® Malt delivers colors plus more roasted flavor than Midnight Wheat Malt.,500,Grain,78,FALSE,US,Briess,1,6,0,0,10,FALSE,FALSE
+ingredient,fermentable_20,Briess - Bonlander Munich Malt,DP 40. Golden leaning toward orange hues.,10,Grain,78,FALSE,US,Briess,2,3.3,40,11.7,50,TRUE,TRUE
+ingredient,fermentable_21,Briess - Carabrown Malt,Begins slightly sweet.  Delivers an array of toasted flavors.  Smooth and clean with a slightly dry finish.  Light brown/orange color contributions. ,55,Grain,79,FALSE,US,Briess,1,2.2,0,0,25,FALSE,FALSE
+ingredient,fermentable_22,Briess - Caracrystal Wheat Malt,"Sweet, smooth, malty, bready, subtle caramel, dark toast.  Exceptionally clean finish.  Orange to mahogany color.",55,Grain,78,FALSE,US,Briess,1,4,0,0,25,FALSE,FALSE
+ingredient,fermentable_23,Briess - Carapils Malt,"Use up to 5% for increased foam, improved head retention and enhanced mouthfeel in any beer style.",1.3,Grain,74,FALSE,US,Briess,1,6.5,0,0,5,FALSE,FALSE
+ingredient,fermentable_24,Briess - Chocolate Malt,"Use in all beer styles for color adjustment. Use 1-10% for desired color in Porter and Stout. The rich roasted coffee, cocoa flavor is very complementary when used in higher percentages in Porters, Stouts, Brown Ales, and other dark beers.",350,Grain,60,FALSE,US,Briess,1,6,0,0,10,FALSE,FALSE
+ingredient,fermentable_25,Briess - Dark Chocolate Malt,"2-Row. The chocolate flavor is very complementary when used in higher percentages in Porter, Stout, Brown Ale, Dunkels and other dark beers. Use in all styles for color. Contributes brown hues.",420,Grain,60,FALSE,US,Briess,1,5.5,0,0,10,FALSE,FALSE
+ingredient,fermentable_26,Briess - Extra Special Malt,"Complex flavored 2-Row Biscuit-style Malt. This hybrid drum roasted malt has an array of both caramel and dry roasted flavors. Use to develop flavors associated with darker, high gravity beers like Doppelbock. Equally well suited for mid to dark Belgian style ales. Adds complexity to Abbey styles and darker styles like dry Irish Stouts and Porters. Contributes dark reed to deep copper colors. At higher usage it contributes lighter brown hues.",130,Grain,73,FALSE,US,Briess,1,2.5,0,0,15,FALSE,FALSE
+ingredient,fermentable_27,Briess - Midnight Wheat Malt,Bitterless black malt that can be used in any recipe calling for debittered black malt. Midnight Wheat Malt is the smoothest source of black color of any malt available.,550,Grain,55,FALSE,US,Briess,1,6.5,0,0,10,FALSE,FALSE
+ingredient,fermentable_28,Briess - Munich Malt 10L,DP 40. Golden leaning toward orange hues.,10,Grain,77,FALSE,US,Briess,1,3.3,40,12,50,TRUE,TRUE
+ingredient,fermentable_29,Briess - Munich Malt 20L,DP 20. Deep golden with orange hues.,20,Grain,74,FALSE,US,Briess,1,2.7,20,12,50,TRUE,TRUE
+ingredient,fermentable_30,Briess - Pale Ale Malt,"DP 85. Use as a rich malty 2-Row base malt. Contributes golden color.  A fully modified, high extract, low protein malt.  Not just a darker 2-Row Base Malt. Its very unique recipe results in the development of a very unique flavor.  Sufficient enzymes to suport the inclusion of event the most demanding specialty malts without extending the brewing cycle.",3.5,Grain,80,FALSE,US,Briess,1.5,4,85,11.7,100,TRUE,TRUE
+ingredient,fermentable_31,Briess - Pilsen Malt,"DP 140. Lightest colored base malt available. Produces very light colored, clean, crisp wort.  Use as 2-Row base malt for all beer styles.  Excellent choice for lagers. Allows the full flavor of specialty malts to shine through.",1.2,Grain,80.5,FALSE,US,Briess,2.5,4.5,140,11.3,100,TRUE,TRUE
+ingredient,fermentable_32,Briess - Roasted Barley,"Contributes color and rich, sharp flavor characteristic of Stouts and some Porters. Impacts foam color.",300,Grain,55,FALSE,US,Briess,1,5,0,0,7,FALSE,FALSE
+ingredient,fermentable_33,Briess - Rye Malt,"DP 105. Rye Malt isn""t just for rye beer styles. Although brewing a traditional rye beer is exceptionally rewarding, try adding Rye Malt to light- and medium-colored and flavored beers for complexity. Or fire up your new distillery and use it to make a single malt whiskey.",3.7,Grain,80,FALSE,US,Briess,1,4.5,105,10.5,35,TRUE,TRUE
+ingredient,fermentable_34,Briess - Smoked Malt,"DP 140. Briess Smoked Malt is produced using cherry wood. The result is a very smooth, smoky flavored, enzyme-active kilned malt.",5,Grain,80.5,FALSE,US,Briess,1,6,140,12,60,TRUE,TRUE
+ingredient,fermentable_35,Briess - Special Roast Malt,"Complex flavored Biscuit-style Malt. With its characteristic and bold sourdough flavor, it will contribute an exciting layer of flavor to Nut Brown Ales, Porters and other dark beer styles. ",40,Grain,72,FALSE,US,Briess,1,2.5,0,0,10,FALSE,FALSE
+ingredient,fermentable_36,Briess - Victory Malt,Biscuit Malt. Well suited for Nut Brown Ales & other dark beers. Its clean flavor makes it equally well suited for ales and lagers alike. Use in small amounts to add complexity to lighter colored ales and lagers.,28,Grain,75,FALSE,US,Briess,1,2.5,0,0,25,FALSE,FALSE
+ingredient,fermentable_37,Briess - Vienna Malt,"DP 130. Use as a base malt or high percentage specialty malt.  Contributes hues learning toward golden/light orange.  Typically used in Vienna, Oktoberfest, Marzen, Alt and all dark lagers.",3.5,Grain,77.5,FALSE,US,Briess,1,3.8,130,12,90,TRUE,TRUE
+ingredient,fermentable_38,"Briess - Wheat Malt, Red","DP 180.  Use as part or all of base malt in wheat beers.  Runs efficiently through the brewhouse with slightly higher protein than White Wheat Malt.  Often used in Hefeweizen and other traditional wheat styles due to a distinctive, characteristic wheat flour flavor.  Improves head and foam retention in any beer style.",2.3,Grain,81,FALSE,US,Briess,2,4,180,13,40,TRUE,TRUE
+ingredient,fermentable_39,"Briess - Wheat Malt, White",DP 160. Use as part or all of base malt in wheat beers. Improves head and foam retention in any beer style.,2.5,Grain,85,FALSE,US,Briess,1,4,160,12,100,TRUE,TRUE
+ingredient,fermentable_40,Briess DME - Bavarian Wheat,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_41,Briess DME - Golden Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_42,Briess DME - Maltoferm A-6001 (Black Malt Extract),,500,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_43,Briess DME - Pilsen Light,,2,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_44,Briess DME - Sparkling Amber,,10,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_45,Briess DME - Traditional Dark,,30,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_46,Briess LME - Golden Light,,4,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_47,Briess LME - Maltoferm A-6000 (Black Malt Extract),,500,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_48,Briess LME - Munich,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_49,Briess LME - Pilsen Light,,2,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_50,Briess LME - Sparkling Amber,,10,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_51,Briess LME - Sweet Brown Rice Syrup,Gluten free,2,Extract,75,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_52,Briess LME - Traditional Dark,,30,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_53,Briess LME - White Sorghum Syrup,Gluten free,3,Extract,75,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_54,Brown Malt (British Chocolate),"Ideal for British Porters and Brown or Mild Ales and even Stouts. It""s a little darker than domestic Chocolate malt yet it has a slightly smoother character in the roast flavor and aroma profiles.",65,Grain,70,FALSE,United Kingdom,,0,0,0,0,10,TRUE,FALSE
+ingredient,fermentable_55,"Brown Sugar, Dark",,50,Sugar,100,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_56,"Brown Sugar, Light",,8,Sugar,100,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_57,Brumalt,"Dark German malt developed to add malt flavor of Alt, Marzen and Oktoberfest beers. Helps create authentic maltiness without having to do a decoction mash. Rarely available for homebrewers.",23,Grain,71.7,FALSE,Germany,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_58,"Candi Sugar, Amber",,75,Sugar,78.3,FALSE,Belgium,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_59,"Candi Sugar, Clear",,1,Sugar,78.3,FALSE,Belgium,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_60,"Candi Sugar, Dark",,275,Sugar,78.3,FALSE,Belgium,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_61,Cane (Beet) Sugar,,0,Sugar,100,FALSE,US,,0,0,0,0,7,FALSE,FALSE
+ingredient,fermentable_62,Cara-Pils/Dextrine,"Dextrins lend body, mouth feel and palate fullness to beers, as well as foam stability. Carapils must be mashed with pale malt, due to its lack of enzymes. Use 5 to 20% for these properties without adding color.",2,Grain,72,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_63,Caraamber,,30,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_64,Carafa,,337,Grain,70,FALSE,Germany,,1.5,4,0,11.7,5,FALSE,FALSE
+ingredient,fermentable_65,Carafa II,,412,Grain,70,FALSE,Germany,,1.5,4,0,11.7,5,FALSE,FALSE
+ingredient,fermentable_66,Carafa III,,525,Grain,70,FALSE,Germany,,1.5,4,0,11.7,5,FALSE,FALSE
+ingredient,fermentable_67,Carafoam,,2,Grain,72,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_68,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_69,Caramel/Crystal Malt - 120L,"Dark Crystal will lend a complex sharp caramel flavor and aroma to beers. Used in smaller quantities this malt will add color and slight sweetness to beers, while heavier concentrations are well suited to strong beers.",120,Grain,72,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_70,Caramel/Crystal Malt - 20L,"This Crystal malt will provide a golden color and a sweet, mild caramel flavor.",20,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_71,Caramel/Crystal Malt - 30L,,30,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_72,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_73,Caramel/Crystal Malt - 60L,"This Medium Crystal malt will lend a well rounded caramel flavor, color and sweetness. This Crystal malt is a good choice if you""re not sure which variety to use.",60,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_74,Caramel/Crystal Malt - 80L,"This Crystal malt will lend a well a pronounced caramel flavor, color and sweetness.",80,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_75,Caramunich Malt,"Use Caramunich for a deeper color, caramelized sugars and contribute a rich malt aroma.",56,Grain,71.7,FALSE,Belgium,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_76,Carared,,20,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_77,Caravienne Malt,"Impart a rich, caramel-sweet aroma and promotes a fuller flavor. Excellent all purpose caramel malt that can be used in high percentages (up to 15%) without leaving the beer too caramel/sweet.",22,Grain,73.9,FALSE,Belgium,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_78,Carawheat (GR),,40,Grain,68,FALSE,,,0,6.5,0,0,0,FALSE,FALSE
+ingredient,fermentable_79,Chocolate Malt (UK),"Ideal for British Porters and Brown or Mild Ales and even Stouts. It""s a little darker than US Chocolate malt yet it has a slightly smoother character in the roast flavor and aroma profiles.",450,Grain,73,FALSE,United Kingdom,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_80,Chocolate Malt (US),"Being the least roasted of the black malts, Chocolate malt will add a dark color and pleasant roast flavor. Small quantities lend a nutty flavor and deep, ruby red color while higher amounts lend a black color and smooth, roasted flavor. Use 3 to 12%.",350,Grain,60,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_81,Coopers LME - Amber,,16.4,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_82,Coopers LME - Dark,,65.9,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_83,Coopers LME - Light,,3.4,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_84,Coopers LME - Wheat,,4.5,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_85,Corn Sugar (Dextrose),,0,Sugar,100,FALSE,US,,0,0,0,0,5,FALSE,FALSE
+ingredient,fermentable_86,Corn Syrup,,1,Sugar,78.3,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_87,"Corn, Flaked",The most common adjunct in American Lagers and Cream ales. Lightens both color and body.,1,Grain,80,FALSE,US,,0,0,0,0,40,TRUE,TRUE
+ingredient,fermentable_88,Dark Liquid Extract,,18,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_89,Dememera Sugar,,2,Sugar,100,FALSE,United Kingdom,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_90,Dry Extract (DME) - Amber,,13,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_91,Dry Extract (DME) - Dark,,18,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_92,Dry Extract (DME) - Extra Light,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_93,Dry Extract (DME) - Light,,8,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_94,Dry Extract (DME) - Wheat,,8,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_95,Grits,,1,Adjunct,80,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_96,Honey,,1,Extract,75,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_97,Honey Malt,This Canadian malt imparts a honey-like flavor. It also also sometimes called Brumalt.  Intensely sweet - adds a sweet malty flavor sometimes associated with honey. ,25,Grain,80,FALSE,Canada,,2,3.8,0,10.5,10,TRUE,FALSE
+ingredient,fermentable_98,Invert Sugar,Sucrose (table sugar) that has been inverted with heat and acid to form a mixture of fructose and glucose.,0,Sugar,100,FALSE,United Kingdom,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_99,Liquid Extract (LME) - Amber,,13,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_100,Liquid Extract (LME) - Pale,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_101,Liquid Extract (LME) - Pilsner,,4,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_102,Liquid Extract (LME) - Wheat,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_103,Maple Syrup,,35,Sugar,65.2,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_104,Melanoiden Malt,,20,Grain,80,FALSE,Germany,,0,0,0,0,15,TRUE,TRUE
+ingredient,fermentable_105,Mild Malt,,4,Grain,80,FALSE,United Kingdom,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_106,Milk Sugar (Lactose),,0,Sugar,76.1,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_107,Molasses,,80,Sugar,78.3,FALSE,US,,0,0,0,0,5,FALSE,FALSE
+ingredient,fermentable_108,Munich Malt,"Although kilned, Munich still retains sufficient enzymes for 100% of the grain bill, or it can be used at a percentage of the total malt content for its full, malty flavor and aroma.",9,Grain,80,FALSE,Germany,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_109,Munich Malt - 10L,"Although kilned, Munich still retains sufficient enzymes for 100% of the grain bill, or it can be used at a percentage of the total malt content for its full, malty flavor and aroma.",10,Grain,77,FALSE,US,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_110,Munich Malt - 20L,"A little darker than German Munich malt and adds a deeper color and fuller malt profile. Great for Dark and amber lagers, blend Munich with German Pils or Domestic 2 Row at the rate of 10 to 60% of the total grain bill.",20,Grain,75,FALSE,US,,0,0,0,0,80,TRUE,TRUE
+ingredient,fermentable_111,Muntons DME - Amber,,13,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_112,Muntons DME - Dark,,22,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_113,Muntons DME - Extra Dark,,38,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_114,Muntons DME - Extra Light,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_115,Muntons DME - Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_116,Muntons DME - Wheat,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_117,Muntons LME - Amber,,7,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_118,Muntons LME - Dark,,2.1,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_119,Muntons LME - Extra Light,,2.8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_120,Muntons LME - Light,,4,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_121,Muntons LME - Wheat,,4,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_122,"Oats, Flaked",Oats will improve mouth feel and add a creamy head. Commonly used in Oatmeal Stout.,1,Grain,80,FALSE,US,,0,0,0,0,30,TRUE,TRUE
+ingredient,fermentable_123,"Oats, Malted",Use to make wheat and weizen beers at 40-60% for wheat and 35-65% for Bavarian weizens. Small amounts at about 3-6 % aid in head retention to any beer without altering final flavor. Use with a highly modified malt to insure diastatic enzymes. Protein rest highly recommended due to very high protein content.,1,Grain,80,FALSE,US,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_124,Pale Malt (2 Row) Bel,,3,Grain,80,FALSE,Belgium,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_125,Pale Malt (2 Row) UK,"Fully modified British malt, easily converted by a single temperature mash. Preferred by many brewers for authentic English ales. This malt has undergone higher kilning than Domestic 2 Row and is lower in diastatic power so keep adjuncts at a lower percentage.",3,Grain,78,FALSE,United Kingdom,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_126,Pale Malt (2 Row) US,"A variety of malt that forms two seed rows along the stem on the grain head. Well modified with a high diastatic power allows mashing with up to 35% grain adjuncts. Because it is fairly neutral 2-Row makes an excellent base malt and is known as the workhorse"" of many recipes. Greater starch per weight ratio than 6-Row. Protein rest recommended to avoid chill-haze. Also know as Klages.""",2,Grain,79,FALSE,US,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_127,Pale Malt (6 Row) US,"This malt variety forms six distinct seed rows on the grain head. Very high diastatic power allows mashing with up to 60% grain adjuncts, great if added diastatic strength is needed in a recipe. 6-Row also has greater husks per weight ratio than 2-Row. Protein rest recommended to avoid chill-haze.",2,Grain,76,FALSE,US,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_128,Peat Smoked Malt,"Smoked over peat moss for a soft sweet, earty smoked character. Imparts a soft peaty smoke flavor for strong Scottish ales.",3,Grain,74,FALSE,United Kingdom,,0,0,0,0,20,TRUE,TRUE
+ingredient,fermentable_129,Pilsner (2 Row) Bel,"This is an excellent base malt for many styles, including full flavored Lagers, Belgian Ales and Belgian Wheat beers.",2,Grain,79,FALSE,Belgium,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_130,Pilsner (2 Row) Ger,,2,Grain,81,FALSE,Germany,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_131,Pilsner (2 Row) UK,,1,Grain,78,FALSE,United Kingdom,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_132,Rahr - 2 Row Malt,,2,Grain,80,FALSE,US,,1,4,120,11.5,100,TRUE,TRUE
+ingredient,fermentable_133,Rahr - 6 Row Malt,,25,Grain,79,FALSE,US,,1,4.2,140,15,100,TRUE,TRUE
+ingredient,fermentable_134,Rahr - Pale Ale Malt,,40,Grain,79,FALSE,US,,1,4.5,120,12,100,TRUE,TRUE
+ingredient,fermentable_135,Rahr - Premium Pilsner Malt,,2,Grain,80,FALSE,US,,1,4,120,11,100,TRUE,TRUE
+ingredient,fermentable_136,Rahr - Red Wheat Malt,,45,Grain,85,FALSE,US,,1,4.5,0,12,50,TRUE,TRUE
+ingredient,fermentable_137,Rahr - White Wheat Malt,,45,Grain,85,FALSE,US,,1,4.5,0,12,50,TRUE,TRUE
+ingredient,fermentable_138,Rauch Malt (Germany),"German malt is smoked over a beechwood fire for a drier, sharper, obvious more wood-smoked flavor. Imparts a distinct smoked character for German Rauch beers.",2,Grain,81,FALSE,Germany,,0,0,0,10,100,FALSE,FALSE
+ingredient,fermentable_139,Rice Extract Syrup,,7,Extract,69.6,FALSE,US,,0,0,0,0,15,FALSE,FALSE
+ingredient,fermentable_140,Rice Hulls,,0,Adjunct,0,FALSE,US,,0,0,0,0,5,FALSE,FALSE
+ingredient,fermentable_141,"Rice, Flaked",Another popular adjunct in American Lagers. Lightens both color and body.,1,Grain,70,FALSE,US,,0,0,0,0,25,TRUE,TRUE
+ingredient,fermentable_142,Roasted Barley,"Use 10 to 12% to impart a distinct, roasted flavor to Stouts. Other dark beers also benefit from smaller quantities (2 - 6%).",300,Grain,55,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_143,Rye Malt,Imparts a distinct sharp flavor.,5,Grain,63,FALSE,US,,0,0,0,0,15,TRUE,TRUE
+ingredient,fermentable_144,"Rye, Flaked",Imparts a distinct sharp flavor.,2,Grain,78.3,FALSE,US,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_145,Simpsons - Aromatic Malt,,25,Grain,82.5,FALSE,UK,,1,5,0,12,5,TRUE,TRUE
+ingredient,fermentable_146,Simpsons - Black Malt,,550,Grain,70,FALSE,UK,,1,3,0,12,10,TRUE,FALSE
+ingredient,fermentable_147,Simpsons - Caramalt,,35,Grain,76,FALSE,UK,,1,5,0,12,20,TRUE,FALSE
+ingredient,fermentable_148,Simpsons - Caramalt Light,,13,Grain,76,FALSE,UK,,1,6.9,0,12,30,TRUE,FALSE
+ingredient,fermentable_149,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,FALSE
+ingredient,fermentable_150,Simpsons - Coffee Malt,,150,Grain,74,FALSE,UK,,1,3.5,0,12,20,TRUE,FALSE
+ingredient,fermentable_151,Simpsons - Crystal Dark,,80,Grain,74,FALSE,UK,,1,5.3,0,12,10,TRUE,FALSE
+ingredient,fermentable_152,Simpsons - Crystal Extra Dark,,160,Grain,74,FALSE,UK,,1,5,0,12,10,TRUE,FALSE
+ingredient,fermentable_153,Simpsons - Crystal Medium,,55,Grain,74,FALSE,UK,,1,4.7,0,12,20,TRUE,FALSE
+ingredient,fermentable_154,Simpsons - Crystal Rye,,90,Grain,73,FALSE,UK,,1,3.1,0,12,5,TRUE,FALSE
+ingredient,fermentable_155,Simpsons - Golden Naked Oats,,10,Grain,73,FALSE,UK,,1,4.5,0,12,15,TRUE,TRUE
+ingredient,fermentable_156,Simpsons - Golden Promise,,2,Grain,81,FALSE,UK,,1,3.5,120,12,100,TRUE,TRUE
+ingredient,fermentable_157,Simpsons - Maris Otter,,3,Grain,81,FALSE,UK,,1,3,120,10,100,TRUE,TRUE
+ingredient,fermentable_158,Simpsons - Peated Malt,Phenol level 12-24,2.5,Grain,81,FALSE,UK,,1,4.6,120,12,10,TRUE,TRUE
+ingredient,fermentable_159,Simpsons - Roasted Barley,,550,Grain,70,FALSE,UK,,1,1.9,0,12,10,TRUE,FALSE
+ingredient,fermentable_160,Smoked Malt,,9,Grain,80,FALSE,Germany,,0,0,0,0,100,TRUE,TRUE
+ingredient,fermentable_161,Special B Malt,"Special B refers to a type of dark, flavorful crystal malt traditionally malted in Belgium. In small amounts, it gives a unique flavor to the finished beer that is often compared to raisins or dried fruit. This malt is always dark, but the color and flavor vary more than most other malt styles; most of the commonly available varieties are in the 110-160 L range, but it may be even darker. Don""t depend on this software to calculate the color of your beer correctly, since it may be expecting a much darker malt than you are actually using; some older sources assume Special B will be over 200 or even up to 300 L. While some sources still claim that Special B must be mashed, it is a crystal malt and can be steeped with an extract batch without adding significant protein to the beer.",160,Grain,65.2,FALSE,Belgium,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_162,Special Roast,"Special Roast Malt is a specially processed malt from the American maltster, Briess. It is kilned using 6 row barley and it appears to be Victory Malt turned up a notch. Flavor: Toasty, Strong Biscuit, Sour Dough, Tangy. Any non-straw colored beer where roasty, toasty flavors are acceptable is a good candidate for this malt. Porters and Nut Brown Ales could take a good helping of this malt, and smaller amounts (less than 8 ounces) would work in Viennas, Märzens, and Alt beers.",50,Grain,72,FALSE,US,Briess,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_163,"Sugar, Table (Sucrose)",,1,Sugar,100,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_164,Toasted Malt,Adds reddish hue without sweetness associated with caramelized malts.,27,Grain,71.7,FALSE,United Kingdom,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_165,Turbinado,,10,Sugar,95.7,FALSE,United Kingdom,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_166,Victory Malt,"Imparts a toasty/nutty/biscuit/bread flavor, and adds head retention. Use in nut browns and other darker beers.",25,Grain,73,FALSE,US,,0,0,0,0,15,TRUE,TRUE
+ingredient,fermentable_167,Vienna Malt,"Vienna Malt is a kiln-dried barley malt darker than pale ale malt, but not as dark as Munich Malt. It imparts a golden to orange color and a distinctive toast or biscuit malt aroma to the beer. Vienna malt traditionally makes up up to 100% of the grist of Vienna Lager and the bulk of the related Märzen style. Other beer styles sometimes use Vienna malt to add malty complexity and light toasty notes to lighter base malts, or to lighten the grist of a beer brewed with mostly Munich malt. Examples include Baltic Porter, Dunkelweizen, and most styles of Bock.",4,Grain,78,FALSE,Germany,,0,0,0,0,90,TRUE,TRUE
+ingredient,fermentable_168,Weyermann - Acidulated Malt,,3.2,Grain,80,FALSE,Germany,,1,7,120,12,10,TRUE,TRUE
+ingredient,fermentable_169,Weyermann - Bohemian Pilsner Malt,,2.1,Grain,81,FALSE,Germany,,1,5,120,10.8,100,TRUE,TRUE
+ingredient,fermentable_170,Weyermann - Carafa I,,350,Grain,70,FALSE,Germany,,1,3.5,0,12,5,TRUE,FALSE
+ingredient,fermentable_171,Weyermann - Carafa II,,425,Grain,70,FALSE,Germany,,1,3.5,0,12,5,TRUE,FALSE
+ingredient,fermentable_172,Weyermann - Carafa III,,520,Grain,70,FALSE,Germany,,1,3.5,0,12,5,TRUE,FALSE
+ingredient,fermentable_173,Weyermann - Carafoam,,2.4,Grain,81,FALSE,Germany,,1,6.5,0,12,40,TRUE,FALSE
+ingredient,fermentable_174,Weyermann - Carawheat,,49,Grain,77,FALSE,Germany,,1,4,0,12,15,TRUE,FALSE
+ingredient,fermentable_175,Weyermann - Chocolate Rye,,250,Grain,20,FALSE,Germany,,1,4,0,12,5,TRUE,FALSE
+ingredient,fermentable_176,Weyermann - Chocolate Wheat,,400,Grain,74,FALSE,Germany,,1,4.5,0,12,5,TRUE,FALSE
+ingredient,fermentable_177,Weyermann - Dark Wheat Malt,,7.3,Grain,85,FALSE,Germany,,1,5,60,12,50,TRUE,TRUE
+ingredient,fermentable_178,Weyermann - Dehusked Carafa I,,350,Grain,70,FALSE,Germany,,1,3.5,0,12,5,TRUE,FALSE
+ingredient,fermentable_179,Weyermann - Dehusked Carafa II,,425,Grain,70,FALSE,Germany,,1,3.5,0,12,5,TRUE,FALSE
+ingredient,fermentable_180,Weyermann - Dehusked Carafa III,,520,Grain,70,FALSE,Germany,,1,3.5,0,12,5,TRUE,FALSE
+ingredient,fermentable_181,Weyermann - Light Munich Malt,,6.9,Grain,82,FALSE,Germany,,1,4.5,60,12,100,TRUE,TRUE
+ingredient,fermentable_182,Weyermann - Melanoiden Malt,,27,Grain,81,FALSE,Germany,,1,4.5,0,12,20,TRUE,TRUE
+ingredient,fermentable_183,Weyermann - Pale Ale Malt,,3.4,Grain,85,FALSE,Germany,,1,5,120,12,100,TRUE,TRUE
+ingredient,fermentable_184,Weyermann - Pale Wheat Malt,,2.4,Grain,85,FALSE,Germany,,1,5,60,12,80,TRUE,TRUE
+ingredient,fermentable_185,Weyermann - Pilsner Malt,,2.4,Grain,81,FALSE,Germany,,1,5,120,11,100,TRUE,TRUE
+ingredient,fermentable_186,Weyermann - Rye Malt,,3.6,Grain,85,FALSE,Germany,,1,5,120,11,50,TRUE,TRUE
+ingredient,fermentable_187,Weyermann - Smoked Malt,,2.8,Grain,81,FALSE,Germany,,1,5,120,11.5,100,TRUE,TRUE
+ingredient,fermentable_188,Weyermann - Vienna Malt,,3.9,Grain,81,FALSE,Germany,,1,5,60,12,100,TRUE,TRUE
+ingredient,fermentable_189,"Wheat Malt, Bel",Use in wheat beers.,2,Grain,81,FALSE,Belgium,,0,0,0,0,60,TRUE,TRUE
+ingredient,fermentable_190,"Wheat Malt, Dark",Use in wheat beers.,9,Grain,84,FALSE,Germany,,0,0,0,0,20,TRUE,TRUE
+ingredient,fermentable_191,"Wheat Malt, Ger",Use in wheat beers.,2,Grain,84,FALSE,Germany,,0,0,0,0,60,TRUE,TRUE
+ingredient,fermentable_192,"Wheat, Flaked","Flaked wheat is not malted, therefore requires extra effort to extract it""s potential sugar content, which will be lower than malted wheat. Flaked wheat is traditional in Belgian witbier and lambics, it contains more starch and higher levels of protein than malted wheat. It adds more mouthfeel than malted wheat and has a different taste, which is noticeable when used in larger quantities. If the grain bill consists of more than 25% flaked wheat you should consider a cereal mash, or precooking the wheat in order to gelatinize it so you can extract more sugars out of it. The addion of 6-row can aid conversion since the barley contains a higher percentage of enzymes than 2-row.",2,Grain,77,FALSE,US,,0,0,0,0,40,TRUE,TRUE
+ingredient,fermentable_193,"Wheat, Roasted",,425,Grain,54.3,FALSE,Germany,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_194,"Wheat, Torrified","Torrified wheat is unmalted wheat that has been heated very quickly to get the kernel to puff up, kind of like popcorn. Torrified wheat adds a different flavor to the beer and the grain is gelatinized so you don""t have to cook it.",2,Grain,79,FALSE,US,,0,0,0,0,40,TRUE,TRUE
+ingredient,fermentable_195,White Wheat Malt,,2,Grain,86,FALSE,US,,0,0,0,0,60,TRUE,TRUE
+ingredient,fermentable_196,Briess - 2 Row Brewers Malt,,2,Grain,80.5,FALSE,US,,1,4,140,12,100,TRUE,TRUE
+ingredient,fermentable_197,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_198,Briess - 2 Row Brewers Malt,,2,Grain,80.5,FALSE,US,,1,4,140,12,100,TRUE,TRUE
+ingredient,fermentable_199,Weyermann - Light Munich Malt,,6.9,Grain,82,FALSE,Germany,,1,4.5,60,12,100,TRUE,TRUE
+ingredient,fermentable_200,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_201,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,TRUE
+ingredient,fermentable_202,Briess - Chocolate Malt,,350,Grain,73,FALSE,US,,1,6,0,13,10,TRUE,TRUE
+ingredient,fermentable_203,Simpsons - Maris Otter,,3,Grain,81,FALSE,UK,,1,3,120,10,100,TRUE,TRUE
+ingredient,fermentable_204,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_205,Caramel/Crystal Malt - 120L,"Dark Crystal will lend a complex sharp caramel flavor and aroma to beers. Used in smaller quantities this malt will add color and slight sweetness to beers, while heavier concentrations are well suited to strong beers.",120,Grain,72,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_206,Simpsons - Maris Otter,,3,Grain,81,FALSE,UK,,1,3,120,10,100,TRUE,TRUE
+ingredient,fermentable_207,Briess - Munich Malt 10L,,10,Grain,76,FALSE,US,,1,3.3,30,13,50,TRUE,TRUE
+ingredient,fermentable_208,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_209,Caramel/Crystal Malt - 120L,"Dark Crystal will lend a complex sharp caramel flavor and aroma to beers. Used in smaller quantities this malt will add color and slight sweetness to beers, while heavier concentrations are well suited to strong beers.",120,Grain,72,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_210,Honey Malt,This Canadian malt imparts a honey-like flavor. It also also sometimes called Brumalt.  Intensely sweet - adds a sweet malty flavor sometimes associated with honey. ,25,Grain,80,FALSE,Canada,,2,3.8,0,10.5,10,TRUE,TRUE
+ingredient,fermentable_211,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,TRUE
+ingredient,fermentable_212,Briess - 2 Row Brewers Malt,,2,Grain,80.5,FALSE,US,,1,4,140,12,100,TRUE,TRUE
+ingredient,fermentable_213,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,TRUE
+ingredient,fermentable_214,"Briess - Wheat Malt, White",,2.6,Grain,86,FALSE,US,,0.6,5,190,11.5,40,TRUE,TRUE
+ingredient,fermentable_215,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_216,Briess - Munich Malt 10L,,10,Grain,76,FALSE,US,,1,3.3,30,13,50,TRUE,TRUE
+ingredient,fermentable_217,Simpsons - Maris Otter,,3,Grain,81,FALSE,UK,,1,3,120,10,100,TRUE,TRUE
+ingredient,fermentable_218,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,TRUE
+ingredient,fermentable_219,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_220,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,TRUE
+ingredient,fermentable_221,Briess - Special Roast Malt,,50,Grain,72,FALSE,US,,1,2.5,0,13,50,TRUE,TRUE
+ingredient,fermentable_222,Briess - 2 Row Brewers Malt,,2,Grain,80.5,FALSE,US,,1,4,140,12,100,TRUE,TRUE
+ingredient,fermentable_223,Briess - Munich Malt 10L,,10,Grain,76,FALSE,US,,1,3.3,30,13,50,TRUE,TRUE
+ingredient,fermentable_224,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_225,Simpsons - Black Malt,,550,Grain,70,FALSE,UK,,1,3,0,12,10,TRUE,TRUE
+ingredient,fermentable_226,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,TRUE
+ingredient,fermentable_227,Simpsons - Maris Otter,,3,Grain,81,FALSE,UK,,1,3,120,10,100,TRUE,TRUE
+ingredient,fermentable_228,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,TRUE
+ingredient,fermentable_229,Simpsons - Black Malt,,550,Grain,70,FALSE,UK,,1,3,0,12,10,TRUE,TRUE
+ingredient,fermentable_230,"Oats, Flaked",Oats will improve mouth feel and add a creamy head. Commonly used in Oatmeal Stout.,1,Grain,80,FALSE,US,,0,0,0,0,30,TRUE,TRUE
+ingredient,fermentable_231,Caramel/Crystal Malt - 80L,"This Crystal malt will lend a well a pronounced caramel flavor, color and sweetness.",80,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_232,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,TRUE
+ingredient,fermentable_233,Briess - 2 Row Brewers Malt,,2,Grain,80.5,FALSE,US,,1,4,140,12,100,TRUE,TRUE
+ingredient,fermentable_234,Briess - Munich Malt 10L,,10,Grain,76,FALSE,US,,1,3.3,30,13,50,TRUE,TRUE
+ingredient,fermentable_235,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_236,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_237,Weyermann - Pilsner Malt,,2.4,Grain,81,FALSE,Germany,,1,5,120,11,100,TRUE,TRUE
+ingredient,fermentable_238,Weyermann - Pale Wheat Malt,,2.4,Grain,85,FALSE,Germany,,1,5,60,12,80,TRUE,TRUE
+ingredient,fermentable_239,Weyermann - Pilsner Malt,,2.4,Grain,81,FALSE,Germany,,1,5,120,11,100,TRUE,TRUE
+ingredient,fermentable_240,Weyermann - Pale Wheat Malt,,2.4,Grain,85,FALSE,Germany,,1,5,60,12,80,TRUE,TRUE
+ingredient,fermentable_241,Briess - Munich Malt 10L,,10,Grain,76,FALSE,US,,1,3.3,30,13,50,TRUE,TRUE
+ingredient,fermentable_242,Caramunich Malt,"Use Caramunich for a deeper color, caramelized sugars and contribute a rich malt aroma.",56,Grain,71.7,FALSE,Belgium,,0,0,0,0,10,FALSE,TRUE
+ingredient,fermentable_243,Weyermann - Pilsner Malt,,2.4,Grain,81,FALSE,Germany,,1,5,120,11,100,TRUE,TRUE
+ingredient,fermentable_244,Weyermann - Pale Wheat Malt,,2.4,Grain,85,FALSE,Germany,,1,5,60,12,80,TRUE,TRUE
+ingredient,fermentable_245,Weyermann - Pilsner Malt,,2.4,Grain,81,FALSE,Germany,,1,5,120,11,100,TRUE,TRUE
+ingredient,fermentable_246,Weyermann - Pale Wheat Malt,,2.4,Grain,85,FALSE,Germany,,1,5,60,12,80,TRUE,TRUE
+ingredient,fermentable_247,"Sugar, Table (Sucrose)",,1,Sugar,100,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_248,Simpsons - Aromatic Malt,,25,Grain,82.5,FALSE,UK,,1,5,0,12,5,TRUE,TRUE
+ingredient,fermentable_249,Briess - 2 Row Carapils Malt,,1.5,Grain,73,FALSE,US,,1,6.5,0,13,5,TRUE,FALSE
+ingredient,fermentable_250,Briess - Chocolate Malt,,350,Grain,73,FALSE,US,,1,6,0,13,10,TRUE,TRUE
+ingredient,fermentable_251,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_252,Caramel/Crystal Malt - 80L,"This Crystal malt will lend a well a pronounced caramel flavor, color and sweetness.",80,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,TRUE
+ingredient,fermentable_253,Special B Malt,"Special B refers to a type of dark, flavorful crystal malt traditionally malted in Belgium. In small amounts, it gives a unique flavor to the finished beer that is often compared to raisins or dried fruit. This malt is always dark, but the color and flavor vary more than most other malt styles; most of the commonly available varieties are in the 110-160 L range, but it may be even darker. Don""t depend on this software to calculate the color of your beer correctly, since it may be expecting a much darker malt than you are actually using; some older sources assume Special B will be over 200 or even up to 300 L. While some sources still claim that Special B must be mashed, it is a crystal malt and can be steeped with an extract batch without adding significant protein to the beer.",160,Grain,65.2,FALSE,Belgium,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_254,Briess - 2 Row Brewers Malt,,2,Grain,80.5,FALSE,US,,1,4,140,12,100,TRUE,TRUE
+ingredient,fermentable_255,Corn Sugar (Dextrose),,0,Sugar,100,FALSE,US,,0,0,0,0,5,FALSE,FALSE
+ingredient,fermentable_256,Rauch Malt (Germany),"German malt is smoked over a beechwood fire for a drier, sharper, obvious more wood-smoked flavor. Imparts a distinct smoked character for German Rauch beers.",3,Grain,81,FALSE,Germany,,0,0,0,10,100,FALSE,TRUE
+ingredient,fermentable_257,Weyermann - Pilsner Malt,,2.4,Grain,81,FALSE,Germany,,1,5,120,11,100,TRUE,TRUE
+ingredient,fermentable_258,Weyermann - Pale Wheat Malt,,2.4,Grain,85,FALSE,Germany,,1,5,60,12,80,TRUE,TRUE
+ingredient,fermentable_259,Briess - Munich Malt 10L,,10,Grain,76,FALSE,US,,1,3.3,30,13,50,TRUE,TRUE
+ingredient,fermentable_260,Caramunich Malt,"Use Caramunich for a deeper color, caramelized sugars and contribute a rich malt aroma.",56,Grain,71.7,FALSE,Belgium,,0,0,0,0,10,FALSE,TRUE
+ingredient,fermentable_261,Simpsons - Black Malt,,550,Grain,70,FALSE,UK,,1,3,0,12,10,TRUE,TRUE
+ingredient,fermentable_262,Weyermann - Melanoiden Malt,,27,Grain,81,FALSE,Germany,,1,4.5,0,12,20,TRUE,TRUE
+ingredient,fermentable_263,Weyermann - Smoked Malt,,2.8,Grain,81,FALSE,Germany,,1,5,120,11.5,100,TRUE,TRUE
+ingredient,fermentable_264,Briess DME - Golden Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_265,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_266,Briess DME - Golden Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_267,Briess LME - Munich,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_268,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_269,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,FALSE
+ingredient,fermentable_270,Briess - Chocolate Malt,,350,Grain,73,FALSE,US,,1,6,0,13,10,TRUE,FALSE
+ingredient,fermentable_271,Muntons DME - Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_272,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_273,Caramel/Crystal Malt - 120L,"Dark Crystal will lend a complex sharp caramel flavor and aroma to beers. Used in smaller quantities this malt will add color and slight sweetness to beers, while heavier concentrations are well suited to strong beers.",120,Grain,72,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_274,Muntons DME - Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_275,Briess LME - Munich,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_276,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_277,Caramel/Crystal Malt - 120L,"Dark Crystal will lend a complex sharp caramel flavor and aroma to beers. Used in smaller quantities this malt will add color and slight sweetness to beers, while heavier concentrations are well suited to strong beers.",120,Grain,72,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_278,Briess - Chocolate Malt,,350,Grain,73,FALSE,US,,1,6,0,13,10,TRUE,FALSE
+ingredient,fermentable_279,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,FALSE
+ingredient,fermentable_280,Honey Malt,This Canadian malt imparts a honey-like flavor. It also also sometimes called Brumalt.  Intensely sweet - adds a sweet malty flavor sometimes associated with honey. ,25,Grain,80,FALSE,Canada,,2,3.8,0,10.5,10,TRUE,FALSE
+ingredient,fermentable_281,Briess DME - Golden Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_282,Briess LME - Munich,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_283,Briess DME - Bavarian Wheat,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_284,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,FALSE
+ingredient,fermentable_285,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,FALSE
+ingredient,fermentable_286,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_287,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,FALSE
+ingredient,fermentable_288,Special Roast,"Special Roast Malt is a specially processed malt from the American maltster, Briess. It is kilned using 6 row barley and it appears to be Victory Malt turned up a notch. Flavor: Toasty, Strong Biscuit, Sour Dough, Tangy. Any non-straw colored beer where roasty, toasty flavors are acceptable is a good candidate for this malt. Porters and Nut Brown Ales could take a good helping of this malt, and smaller amounts (less than 8 ounces) would work in Viennas, Märzens, and Alt beers.",50,Grain,72,FALSE,US,Briess,0,0,0,0,10,TRUE,FALSE
+ingredient,fermentable_289,Muntons DME - Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_290,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_291,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,FALSE
+ingredient,fermentable_292,Simpsons - Black Malt,,550,Grain,70,FALSE,UK,,1,3,0,12,10,TRUE,FALSE
+ingredient,fermentable_293,Briess LME - Munich,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_294,Briess DME - Golden Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_295,"Oats, Flaked",Oats will improve mouth feel and add a creamy head. Commonly used in Oatmeal Stout.,1,Grain,80,FALSE,US,,0,0,0,0,30,TRUE,FALSE
+ingredient,fermentable_296,Simpsons - Chocolate Malt,,400,Grain,73,FALSE,UK,,1,1.9,0,12,20,TRUE,FALSE
+ingredient,fermentable_297,Briess - Victory Malt,,10,Grain,73,FALSE,US,,1,2.5,0,13,25,TRUE,FALSE
+ingredient,fermentable_298,Caramel/Crystal Malt - 80L,"This Crystal malt will lend a well a pronounced caramel flavor, color and sweetness.",80,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_299,Simpsons - Black Malt,,550,Grain,70,FALSE,UK,,1,3,0,12,10,TRUE,FALSE
+ingredient,fermentable_300,Muntons DME - Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_301,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_302,Caramel/Crystal Malt - 40L,"This Pale Crystal malt will lend a balance of medium caramel color, flavor, and body.",40,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_303,Briess DME - Golden Light,,4,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_304,Briess LME - Munich,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_305,Briess DME - Bavarian Wheat,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_306,"Sugar, Table (Sucrose)",,1,Sugar,100,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_307,Briess DME - Bavarian Wheat,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_308,Briess LME - Munich,,8,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_309,Caramunich Malt,"Use Caramunich for a deeper color, caramelized sugars and contribute a rich malt aroma.",56,Grain,71.7,FALSE,Belgium,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_310,Briess DME - Pilsen Light,,2,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_311,Briess DME - Pilsen Light,,2,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_312,Briess DME - Bavarian Wheat,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_313,"Sugar, Table (Sucrose)",,1,Sugar,100,FALSE,US,,0,0,0,0,10,FALSE,FALSE
+ingredient,fermentable_314,Briess DME - Bavarian Wheat,,3,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_315,Simpsons - Aromatic Malt,,25,Grain,82.5,FALSE,UK,,1,5,0,12,5,TRUE,FALSE
+ingredient,fermentable_316,Briess DME - Pilsen Light,,2,Dry Extract,95,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_317,Corn Sugar (Dextrose),,0,Sugar,100,FALSE,US,,0,0,0,0,5,FALSE,FALSE
+ingredient,fermentable_318,Caramel/Crystal Malt - 10L,"This Light Crystal malt will lend body and mouth feel with a minimum of color, much like Carapils, but with a light caramel sweetness.",10,Grain,75,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_319,Caramel/Crystal Malt - 80L,"This Crystal malt will lend a well a pronounced caramel flavor, color and sweetness.",80,Grain,74,FALSE,US,,0,0,0,0,20,FALSE,FALSE
+ingredient,fermentable_320,Briess - Chocolate Malt,,350,Grain,73,FALSE,US,,1,6,0,13,10,TRUE,FALSE
+ingredient,fermentable_321,Special B Malt,"Special B refers to a type of dark, flavorful crystal malt traditionally malted in Belgium. In small amounts, it gives a unique flavor to the finished beer that is often compared to raisins or dried fruit. This malt is always dark, but the color and flavor vary more than most other malt styles; most of the commonly available varieties are in the 110-160 L range, but it may be even darker. Don""t depend on this software to calculate the color of your beer correctly, since it may be expecting a much darker malt than you are actually using; some older sources assume Special B will be over 200 or even up to 300 L. While some sources still claim that Special B must be mashed, it is a crystal malt and can be steeped with an extract batch without adding significant protein to the beer.",160,Grain,65.2,FALSE,Belgium,,0,0,0,0,10,TRUE,TRUE
+ingredient,fermentable_322,Briess LME - Golden Light,,4,Extract,78,FALSE,US,,0,0,0,0,100,FALSE,FALSE
+ingredient,fermentable_323,Briess - 2 Row Black Malt,2-Row. Color adjustment for all beer styles. Use with other roasted malts for mild flavored dark beers. Has little impact on foam color.,500,Grain,55,FALSE,US,Briess,1,6,0,0,10,FALSE,FALSE
+ingredient,fermentable_324,Briess - 2 Row Caramel Malt 10L,"Candylike sweetness, mild caramel.",10,Grain,77,FALSE,US,Briess,1,7,0,0,15,FALSE,FALSE
+ingredient,fermentable_325,Briess - 2 Row Caramel Malt 120L,"Pronounced caramel, slight burnt sugar, raisiny, prunes.",120,Grain,75,FALSE,US,Briess,1,3,0,0,15,FALSE,FALSE
+ingredient,fermentable_326,Briess - 2 Row Caramel Malt 30L,"Sweet, caramel, toffee.",30,Grain,77,FALSE,US,Briess,1,5.5,0,0,15,FALSE,FALSE
+ingredient,fermentable_327,Briess - 2 Row Caramel Malt 40L,,40,Grain,77,FALSE,US,Briess,1,5.5,0,0,15,FALSE,FALSE
+ingredient,fermentable_328,Briess - 2 Row Caramel Malt 60L,"Sweet, pronounced caramel.",60,Grain,77,FALSE,US,Briess,1,5,0,0,15,FALSE,FALSE
+ingredient,fermentable_329,Briess - 2 Row Caramel Malt 80L,"Pronounced caramel, slight burnt sugar, raisiny.",80,Grain,76,FALSE,US,Briess,1,4.5,0,0,15,FALSE,FALSE
+ingredient,fermentable_330,Briess - 2 Row Chocolate Malt,"2-Row. Use in all beer styles for color adjustment. Use 1-10% for desired color in Porter and Stout. The rich roasted coffee, cocoa flavor is very complementary when used in higher percentages in Porters, Stouts, Brown Ales, and other dark beers. ",350,Grain,60,FALSE,US,Briess,1,5.5,0,0,10,FALSE,FALSE
+ingredient,fermentable_331,Briess - Barley Flakes,"Pregelatinized. Use Barley Flakes as an adjunct in all-grain brews to produce a lighter colored finished beer without lowering the original gravity. Use in place of corn as an adjunct to eliminate corn flavor in the finished beer. Use at 10-25% of total grist to produce a light colored, mild flavored, dry beer.",1.4,Adjunct,70,FALSE,US,Briess,0,9,0,12.5,100,TRUE,TRUE
+ingredient,fermentable_332,Briess - Brown Rice Flakes,"Pregelatinized. Briess Rice Flakes produce a light, clean and crisp characteristic to the finished beer. Use up to 40% as a ceral adjunct in the total grist.",1,Adjunct,60,FALSE,US,Briess,0,7,0,10,40,TRUE,TRUE
+ingredient,fermentable_333,Briess - Caramel Malt 10L,"Candylike sweetness, mild caramel.",10,Grain,76,FALSE,US,Briess,1,7,0,0,15,FALSE,FALSE
+ingredient,fermentable_334,Briess - Caramel Malt 120L,"Pronounced caramel, slight burnt sugar, raisiny, prunes.",120,Grain,74,FALSE,US,Briess,0,3,0,0,15,FALSE,FALSE
+ingredient,fermentable_335,Briess - Caramel Malt 20L,,20,Grain,76,FALSE,US,Briess,0,6,0,0,15,FALSE,FALSE
+ingredient,fermentable_336,Briess - Caramel Malt 40L,"Sweet, caramel, toffee.",40,Grain,75,FALSE,US,Briess,0,5.5,0,0,15,FALSE,FALSE
+ingredient,fermentable_337,Briess - Caramel Malt 60L,"Sweet, pronounced caramel.",60,Grain,76,FALSE,US,,0,5,0,0,15,FALSE,FALSE
+ingredient,fermentable_338,Briess - Caramel Malt 80L,"Pronounced caramel, slight burnt sugar, raisiny.",80,Grain,75,FALSE,US,Briess,0,4.5,0,0,15,FALSE,FALSE
+ingredient,fermentable_339,Briess - Caramel Malt 90L,"Pronounced caramel, slight burnt sugar, raisiny, prunes.",90,Grain,75,FALSE,US,Briess,0,4,0,0,15,FALSE,FALSE
+ingredient,fermentable_340,Briess - Caramel Munich Malt 60L,"This darker colored, more intensely flavored 2-Row caramel munich malt is excellent in IPAs, Pale ales, Oktoberfests and Porters. Imparts amber to red hues.",60,Grain,77,FALSE,US,Briess,1,3.5,0,0,15,FALSE,FALSE
+ingredient,fermentable_341,Briess - Caramel Vienne Malt 20L,This 2-Row caramel malt adds flavors unique to Vienna-style lagers and Belgian-style Abbey Ales. Imparts golden hues.,20,Grain,78,FALSE,US,Briess,1,4.5,0,0,10,FALSE,FALSE
+ingredient,fermentable_342,Briess - Goldpils Vienna Malt,"DP 80. Use as a base malt or high percentage specialty malt.  Contributes light golden hues.  Typically used in Vienna, Oktoberfest and Marzen beers.  Use in any beer for rich malty flavor.",3.5,Grain,80,FALSE,US,Briess,2,3.5,80,12,100,TRUE,TRUE
+ingredient,fermentable_343,Briess - Oat Flakes,Pregelatinized. Use 5-25% of the total grist for an Oatmeal Stout. Use a small percentage in Belgian Wit Beers.,2.5,Adjunct,80,FALSE,US,Briess,0,7.5,0,14,25,TRUE,TRUE
+ingredient,fermentable_344,Briess - Red Wheat Flakes,Pregelatinized. Red Wheat Flakes can be used in place of Wheat Malt to make Wheat Beer. Flakes will yield a different flavor profile than Wheat Malt. Use in theproduction of Belgian Wit Beers. Use up to 40% as a cereal adjunct in the total grist. Use 0.5-1.0% to a standard brew to increase foam stability.,2,Adjunct,70,FALSE,US,Briess,0,7,0,13.5,40,TRUE,TRUE
+ingredient,fermentable_345,Briess - Rye Flakes,"Pregelatinized. Rye Flakes contribute a very clean, distinctive rye flavor. Use to to 40% as a cereal adjunct in the total grist to create rye Beer. Start at 5-10% and increase in increments of 5% because of the concentrated flavor of Rye Flakes.",3,Adjunct,71,FALSE,US,Briess,0,7,0,13,40,TRUE,TRUE
+ingredient,fermentable_346,Briess - Torrified Red Wheat,"Torrified Wheat is short for Insta Grains® Soft Red Wheat Whole Kernel. Heat treated to break the cellular structure, allowing more rapid hydration and malt enzymes to more completely attack the starches and protein. Use up to 40% of the total grist bill.",1.5,Grain,76,FALSE,US,Briess,0,8.5,0,11,40,TRUE,TRUE
+ingredient,fermentable_347,Briess - Yellow Corn Flakes,"Pregelatinized. Using Yellow Corn Flakes as an adjunct produces a lower color in the finished beer without lowering the original gravity.Yellow Corn Flakes produce a beer with a mild, less malty flavor. Yellow Corn Flakes produce a drier, more crisp beer.",0.8,Adjunct,75,FALSE,US,Briess,0,8,0,10,40,TRUE,TRUE
