@@ -1,22 +1,29 @@
 package beercraft.util;
 
-import java.util.Map;
-
 public class Response {
+    private Object body;
+    private int statusCode;
 
-	private final String message;
-	private final Map<String, Object> input;
+    public Response() {
+        this.body = "";
+        this.statusCode = 200;
+    }
 
-	public Response(String message, Map<String, Object> input) {
-		this.message = message;
-		this.input = input;
-	}
+    public Response(Object body) {
+        this.body = body;
+        this.statusCode = 200;
+    }
 
-	public String getMessage() {
-		return this.message;
-	}
+    public Response(Object body, int statusCode) {
+        this.body = body;
+        this.statusCode = statusCode;
+    }
 
-	public Map<String, Object> getInput() {
-		return this.input;
-	}
+    public Object getBody() {
+        return body;
+    }
+
+    public int getStatusCode() {
+        return statusCode;
+    }
 }
