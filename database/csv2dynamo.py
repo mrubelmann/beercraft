@@ -53,10 +53,14 @@ def format_item(names, types, values):
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument('-t', '--table', default="UberTable", required=False, help='The table name')
-    parser.add_argument('-c', '--csvFile', type=argparse.FileType('r'), help='The CSV file to convert')
-    parser.add_argument('-o', '--output', help='The base name for the output files')
+    parser = argparse.ArgumentParser(formatter_class=argparse.RawDescriptionHelpFormatter, description=
+'''Converts a CSV into JSON that can be ingested by DynamoDB. To upload the
+results, use the AWS CLI tools as follows:
+
+    aws dynamodb batch-write-item --request-items file://<filename>.json)''')
+    parser.add_argument('-t', '--table', default="Beercraft", required=False, help='The table name')
+    parser.add_argument('-c', '--csvFile', required=True, type=argparse.FileType('r'), help='The CSV file to convert')
+    parser.add_argument('-o', '--output', required=True, help='The base name for the output files')
     args = parser.parse_args()
 
     with args.csvFile as file:
