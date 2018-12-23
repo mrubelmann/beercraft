@@ -87,6 +87,17 @@ module.exports = function (plop) {
                 templateFile: 'plop-templates/RequestWorker.hbs'
             });
 
+            actions.push({
+                type: 'modify',
+                pattern: '# [NEW EVENTS GO HERE]',
+                path: 'serverless.yml',
+                template:
+`   - http:
+        path: {{path}}
+        method: {{lowerCase method}}
+# [NEW EVENTS GO HERE]`
+            });
+
             return actions;
         }
     });
