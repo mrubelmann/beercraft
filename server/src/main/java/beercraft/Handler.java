@@ -40,9 +40,9 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
     private List<Endpoint> endpoints;
 
     public Handler() {
-        this.endpoints = Arrays.asList(
-                new Endpoint("/users/{userId}/database", "GET", GetUserDatabaseRequestHandler.class)
-        );
+        this.endpoints = new ArrayList<>();
+        this.endpoints.add(new Endpoint("/users/{userId}/database", "GET", GetUserDatabaseRequestHandler.class));
+        // [NEW ENDPOINTS GO HERE]
     }
 
     /**
@@ -93,3 +93,4 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
         }
     }
 }
+

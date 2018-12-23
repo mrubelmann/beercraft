@@ -91,11 +91,18 @@ module.exports = function (plop) {
                 type: 'modify',
                 pattern: '# [NEW EVENTS GO HERE]',
                 path: 'serverless.yml',
-                template:
-`   - http:
+                template: `- http:
         path: {{path}}
         method: {{lowerCase method}}
-# [NEW EVENTS GO HERE]`
+    # [NEW EVENTS GO HERE]`
+            });
+
+            actions.push({
+                type: 'modify',
+                pattern: '// [NEW ENDPOINTS GO HERE]',
+                path: 'server/src/main/java/beercraft/Handler.java',
+                template: `this.endpoints.add(new Endpoint("/{{path}}", "{{upperCase method}}", {{requestHandler}}.class));
+        // [NEW ENDPOINTS GO HERE]`
             });
 
             return actions;
