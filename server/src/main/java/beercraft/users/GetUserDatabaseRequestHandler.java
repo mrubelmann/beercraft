@@ -1,4 +1,4 @@
-package beercraft.databases;
+package beercraft.users;
 
 import beercraft.ingredients.GetGlobalIngredientsQuery;
 import beercraft.util.*;

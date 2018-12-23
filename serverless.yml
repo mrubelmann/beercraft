@@ -33,7 +33,7 @@ functions:
 
     events:
     - http:
-        path: databases
+        path: users/{userId}/database
         method: get
 
 resources:

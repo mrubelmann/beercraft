@@ -1,6 +1,6 @@
 package beercraft;
 
-import beercraft.databases.GetUserDatabaseRequestHandler;
+import beercraft.users.GetUserDatabaseRequestHandler;
 import beercraft.util.ApiGatewayResponse;
 import beercraft.util.RequestData;
 import beercraft.util.Response;
@@ -41,7 +41,7 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
 
     public Handler() {
         this.endpoints = Arrays.asList(
-                new Endpoint("/databases", "GET", GetUserDatabaseRequestHandler.class)
+                new Endpoint("/users/{userId}/database", "GET", GetUserDatabaseRequestHandler.class)
         );
     }
 
