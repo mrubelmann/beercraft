@@ -16,7 +16,8 @@ public class GetUserDatabaseRequestHandler implements RequestHandler {
      * @return The response
      */
     public Response handleRequest(RequestData requestData) {
-        logger.debug("Handling request to get user database");
+        logger.debug("GET /users/{userId}/database");
+        logger.debug(String.format("Request data: %s", requestData));
 
         // TODO: Validate user
 
@@ -25,8 +26,6 @@ public class GetUserDatabaseRequestHandler implements RequestHandler {
 
         // Do it.
         GetUserDatabaseRequestWorker worker = new GetUserDatabaseRequestWorker(new GetGlobalIngredientsQuery(table));
-        String result = worker.execute();
-
-        return new Response(result);
+        return new Response(worker.execute());
     }
 }

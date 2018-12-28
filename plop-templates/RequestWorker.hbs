@@ -1,29 +1,16 @@
 package beercraft.{{package}};
 
 import beercraft.util.Executable;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class {{requestWorker}} implements Executable<String> {
+public class {{requestWorker}} implements Executable<List<Map<String, Object>> {
     static final Logger logger = LogManager.getLogger({{requestWorker}}.class);
 
     public {{requestWorker}}() {
     }
 
     @Override
-    public String execute() {
-        // TODO: Query for something.
-        //List<Map<String, Object>> result = query.execute();
-
-        // TODO: Return the result as a JSON string.
-        //final ObjectMapper mapper = new ObjectMapper();
-        //try {
-        //    return mapper.writeValueAsString(result);
-        //}
-        //catch (JsonProcessingException e) {
-        //    throw new RuntimeException(e);
-        //}
+    public List<Map<String, Object> execute() {
     }
 }

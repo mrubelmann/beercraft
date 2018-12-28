@@ -15,7 +15,8 @@ public class {{requestHandler}} implements RequestHandler {
      * @return The response
      */
     public Response handleRequest(RequestData requestData) {
-        logger.debug("PUT A MESSAGE HERE");
+        logger.debug("{{upperCase method}} /{{path}}");
+        logger.debug(String.format("Request data: %s", requestData));
 
         // TODO: Validate input.
 
@@ -24,8 +25,6 @@ public class {{requestHandler}} implements RequestHandler {
 
         // Run the worker.
         {{requestWorker}} worker = new {{requestWorker}}();
-        String result = worker.execute();
-
-        return new Response(result);
+        return new Response(worker.execute());
     }
 }
