@@ -35,6 +35,9 @@ functions:
     - http:
         path: users/{userId}/database
         method: get
+    - http:
+        path: recipes
+        method: post
     # [NEW EVENTS GO HERE]
 
 resources:

@@ -1,6 +1,9 @@
 package beercraft;
 
 import beercraft.users.GetUserDatabaseRequestHandler;
+import beercraft.recipes.CreateRecipeRequestHandler;
+// [NEW REQUEST HANDLER IMPORTS GO HERE]
+
 import beercraft.util.ApiGatewayResponse;
 import beercraft.util.RequestData;
 import beercraft.util.Response;
@@ -42,6 +45,7 @@ public class Handler implements RequestHandler<Map<String, Object>, ApiGatewayRe
     public Handler() {
         this.endpoints = new ArrayList<>();
         this.endpoints.add(new Endpoint("/users/{userId}/database", "GET", GetUserDatabaseRequestHandler.class));
+        this.endpoints.add(new Endpoint("/recipes", "POST", CreateRecipeRequestHandler.class));
         // [NEW ENDPOINTS GO HERE]
     }
 

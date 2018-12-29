@@ -105,6 +105,14 @@ module.exports = function (plop) {
         // [NEW ENDPOINTS GO HERE]`
             });
 
+            actions.push({
+                type: 'modify',
+                pattern: '// [NEW REQUEST HANDLER IMPORTS GO HERE]',
+                path: 'server/src/main/java/beercraft/Handler.java',
+                template: `import beercraft.{{package}}.{{requestHandler}};
+// [NEW REQUEST HANDLER IMPORTS GO HERE]`
+            });
+
             return actions;
         }
     });
