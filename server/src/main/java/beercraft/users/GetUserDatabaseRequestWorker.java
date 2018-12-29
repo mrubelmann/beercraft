@@ -2,13 +2,14 @@ package beercraft.users;
 
 import beercraft.ingredients.GetGlobalIngredientsQuery;
 import beercraft.util.Executable;
+import beercraft.util.QueryResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.List;
-import java.util.Map;
-
-public class GetUserDatabaseRequestWorker implements Executable<List<Map<String, Object>>> {
+/**
+ * Business logic needed to service GET requests to /users/{userId}/database
+ */
+public class GetUserDatabaseRequestWorker implements Executable<QueryResult> {
     static final Logger logger = LogManager.getLogger(GetUserDatabaseRequestWorker.class);
 
     private GetGlobalIngredientsQuery globalIngredientsQuery;
@@ -18,11 +19,11 @@ public class GetUserDatabaseRequestWorker implements Executable<List<Map<String,
     }
 
     @Override
-    public List<Map<String, Object>> execute() {
+    public QueryResult execute() {
         // TODO: Query for user profile with ID from URL
 
         // Query for shared ingredients
-        List<Map<String, Object>> globalIngredients = this.globalIngredientsQuery.execute();
+        QueryResult globalIngredients = this.globalIngredientsQuery.execute();
 
         // TODO: Query for user ingredients
         // TODO: Query for user recipes

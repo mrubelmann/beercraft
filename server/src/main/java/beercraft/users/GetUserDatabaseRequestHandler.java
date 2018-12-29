@@ -6,12 +6,14 @@ import com.amazonaws.services.dynamodbv2.document.Table;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * Handles GET requests to /users/{userId}/database.
+ */
 public class GetUserDatabaseRequestHandler implements RequestHandler {
     static final Logger logger = LogManager.getLogger(GetUserDatabaseRequestHandler.class);
 
     /**
-     * Handles a request that was dispatched by the main Lambda handler.
-     *
+     * Handles the request
      * @param requestData The request body and query parameters
      * @return The response
      */

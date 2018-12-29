@@ -1,12 +1,16 @@
 package beercraft.ingredients;
 
 import beercraft.util.Executable;
+import beercraft.util.QueryResult;
 import com.amazonaws.services.dynamodbv2.document.*;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
 import com.amazonaws.services.dynamodbv2.document.utils.ValueMap;
 import java.util.*;
 
-public class GetGlobalIngredientsQuery implements Executable<List<Map<String, Object>>> {
+/**
+ * Gets all of the ingredients that are shared globally.
+ */
+public class GetGlobalIngredientsQuery implements Executable<QueryResult> {
     private Table table;
 
     public GetGlobalIngredientsQuery(Table table) {
@@ -14,7 +18,7 @@ public class GetGlobalIngredientsQuery implements Executable<List<Map<String, Ob
     }
 
     @Override
-    public List<Map<String, Object>> execute() {
+    public QueryResult execute() {
         // Search for everything with "ingredient" for a partition key.
         QuerySpec spec = new QuerySpec()
             .withKeyConditionExpression("PK = :v_partition")
@@ -36,6 +40,6 @@ public class GetGlobalIngredientsQuery implements Executable<List<Map<String, Ob
             jsonItems.add(iterator.next().asMap());
         }
 
-        return jsonItems;
+        return new QueryResult(jsonItems);
     }
 }

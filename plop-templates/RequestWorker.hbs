@@ -1,16 +1,20 @@
 package beercraft.{{package}};
 
 import beercraft.util.Executable;
+import beercraft.util.QueryResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-public class {{requestWorker}} implements Executable<List<Map<String, Object>> {
+/**
+* Business logic needed to service {{upperCase method}} requests to /{{path}}.
+*/
+public class {{requestWorker}} implements Executable<QueryResult> {
     static final Logger logger = LogManager.getLogger({{requestWorker}}.class);
 
     public {{requestWorker}}() {
     }
 
     @Override
-    public List<Map<String, Object> execute() {
+    public QueryResult execute() {
     }
 }
