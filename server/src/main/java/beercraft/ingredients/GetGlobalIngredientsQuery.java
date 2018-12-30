@@ -35,11 +35,11 @@ public class GetGlobalIngredientsQuery implements Executable<QueryResult> {
 
         // Go through the returned items and turn them into a list of attribute maps.
         Iterator<Item> iterator = items.iterator();
-        List<Map<String, Object>> jsonItems = new ArrayList<>();
+        QueryResult jsonItems = new QueryResult();
         while (iterator.hasNext()) {
             jsonItems.add(iterator.next().asMap());
         }
 
-        return new QueryResult(jsonItems);
+        return jsonItems;
     }
 }
