@@ -7,20 +7,20 @@ public interface DatabaseItem {
     /**
      * @return The partition key
      */
-    String getPartitionKey();
+    String getPK();
 
     /**
      * @param partitionKey The partition key
      */
-    void setPartitionKey(String partitionKey);
+    void setPK(String partitionKey);
 
     /**
      * @return The sort key
      */
-    String getSortKey();
+    String getSK();
 
     /**
      * @param sortKey The sort key
      */
-    void setSortKey(String sortKey);
+    void setSK(String sortKey);
 }

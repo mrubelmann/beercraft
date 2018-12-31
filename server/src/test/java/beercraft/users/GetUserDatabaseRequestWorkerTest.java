@@ -3,9 +3,10 @@ package beercraft.users;
 import beercraft.builders.FermentableBuilder;
 import beercraft.builders.MockGetGlobalIngredientQueryBuilder;
 import beercraft.ingredients.Fermentable;
-import beercraft.ingredients.FermentableFactory;
 import beercraft.ingredients.GetGlobalIngredientsQuery;
+import beercraft.util.ObjectMapperSingleton;
 import beercraft.util.QueryResult;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.*;
 
@@ -21,7 +22,8 @@ class GetUserDatabaseRequestWorkerTest {
         QueryResult queryResult = worker.execute();
         assertThat(queryResult.size()).isEqualTo(1);
 
-        Fermentable actualFermentable = FermentableFactory.createFromAttributes(queryResult.get(0));
+        ObjectMapper mapper = ObjectMapperSingleton.getInstance();
+        Fermentable actualFermentable = mapper.convertValue(queryResult.get(0), Fermentable.class);
         assertThat(actualFermentable).isEqualToComparingFieldByField(fermentable);
     }
 
@@ -40,9 +42,10 @@ class GetUserDatabaseRequestWorkerTest {
         QueryResult queryResult = worker.execute();
         assertThat(queryResult.size()).isEqualTo(2);
 
+        ObjectMapper mapper = ObjectMapperSingleton.getInstance();
         Fermentable[] actualFermentables = new Fermentable[]{
-                FermentableFactory.createFromAttributes(queryResult.get(0)),
-                FermentableFactory.createFromAttributes(queryResult.get(1))
+                mapper.convertValue(queryResult.get(0), Fermentable.class),
+                mapper.convertValue(queryResult.get(1), Fermentable.class)
         };
         assertThat(actualFermentables[0]).isEqualToComparingFieldByField(fermentables[0]);
         assertThat(actualFermentables[1]).isEqualToComparingFieldByField(fermentables[1]);

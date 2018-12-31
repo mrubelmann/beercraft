@@ -5,8 +5,8 @@ import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
 @DynamoDBTable(tableName = "UberTable")
 public class Fermentable implements Ingredient, DatabaseItem {
-    private String partitionKey;
-    private String sortKey;
+    private String pk;
+    private String sk;
     private String name;
     private String notes;
     private double color;
@@ -23,13 +23,13 @@ public class Fermentable implements Ingredient, DatabaseItem {
     private boolean recommendMash;
     private boolean mashed;
 
-    @DynamoDBHashKey(attributeName = "PK")
-    public String getPartitionKey() { return partitionKey; }
-    public void setPartitionKey(String partitionKey) { this.partitionKey = partitionKey; }
+    @DynamoDBHashKey
+    public String getPK() { return pk; }
+    public void setPK(String pk) { this.pk = pk; }
 
-    @DynamoDBRangeKey(attributeName = "SK")
-    public String getSortKey() { return sortKey; }
-    public void setSortKey(String sortKey) { this.sortKey = sortKey; }
+    @DynamoDBRangeKey
+    public String getSK() { return sk; }
+    public void setSK(String sk) { this.sk = sk; }
 
     @DynamoDBAttribute
     public String getName() { return name; }

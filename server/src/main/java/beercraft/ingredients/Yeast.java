@@ -7,8 +7,8 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperFieldModel.*
 
 @DynamoDBTable(tableName = "Yeast")
 public class Yeast implements DatabaseItem, Ingredient {
-    private String partitionKey;
-    private String sortKey;
+    private String pk;
+    private String sk;
     private String name;
     private String notes;
     private double defaultAmount;
@@ -22,12 +22,12 @@ public class Yeast implements DatabaseItem, Ingredient {
     private double attenuation;
 
     @DynamoDBHashKey(attributeName = "PK")
-    public String getPartitionKey() { return partitionKey; }
-    public void setPartitionKey(String partitionKey) { this.partitionKey = partitionKey; }
+    public String getPK() { return pk; }
+    public void setPK(String partitionKey) { this.pk = partitionKey; }
 
     @DynamoDBRangeKey(attributeName = "SK")
-    public String getSortKey() { return sortKey; }
-    public void setSortKey(String sortKey) { this.sortKey = sortKey; }
+    public String getSK() { return sk; }
+    public void setSK(String sortKey) { this.sk = sortKey; }
 
     @DynamoDBAttribute(attributeName = "Name")
     public String getName() {

@@ -8,8 +8,8 @@ public class FermentableBuilder {
 
     public FermentableBuilder() {
         fermentable = new Fermentable();
-        fermentable.setPartitionKey("ingredient");
-        fermentable.setSortKey(RandomData.getString());
+        fermentable.setPK("ingredient");
+        fermentable.setSK(RandomData.getString());
         fermentable.setName(RandomData.getString());
         fermentable.setNotes(RandomData.getString());
         fermentable.setColor(RandomData.getDouble());

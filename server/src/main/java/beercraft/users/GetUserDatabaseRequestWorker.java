@@ -1,6 +1,5 @@
 package beercraft.users;
 
-import beercraft.ingredients.GetGlobalIngredientsQuery;
 import beercraft.util.Executable;
 import beercraft.util.QueryResult;
 import org.apache.logging.log4j.LogManager;
@@ -12,9 +11,9 @@ import org.apache.logging.log4j.Logger;
 public class GetUserDatabaseRequestWorker implements Executable<QueryResult> {
     static final Logger logger = LogManager.getLogger(GetUserDatabaseRequestWorker.class);
 
-    private GetGlobalIngredientsQuery globalIngredientsQuery;
+    private Executable<QueryResult> globalIngredientsQuery;
 
-    public GetUserDatabaseRequestWorker(GetGlobalIngredientsQuery globalIngredientsQuery) {
+    public GetUserDatabaseRequestWorker(Executable<QueryResult> globalIngredientsQuery) {
         this.globalIngredientsQuery = globalIngredientsQuery;
     }
 
