@@ -1,6 +1,5 @@
 package beercraft.{{package}};
 
-import beercraft.util.Executable;
 import beercraft.util.QueryResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,14 +7,13 @@ import org.apache.logging.log4j.Logger;
 /**
 * Business logic needed to service {{upperCase method}} requests to /{{path}}.
 */
-public class {{requestWorker}} implements Executable<QueryResult> {
+public class {{requestWorker}} {
     static final Logger logger = LogManager.getLogger({{requestWorker}}.class);
 
     public {{requestWorker}}() {
     }
 
-    @Override
     public QueryResult execute() {
-        returs null;
+        return null;
     }
 }

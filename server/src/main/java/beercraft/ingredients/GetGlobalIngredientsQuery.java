@@ -1,6 +1,5 @@
 package beercraft.ingredients;
 
-import beercraft.util.Executable;
 import beercraft.util.QueryResult;
 import com.amazonaws.services.dynamodbv2.document.*;
 import com.amazonaws.services.dynamodbv2.document.spec.QuerySpec;
@@ -10,14 +9,13 @@ import java.util.*;
 /**
  * Gets all of the ingredients that are shared globally.
  */
-public class GetGlobalIngredientsQuery implements Executable<QueryResult> {
+public class GetGlobalIngredientsQuery {
     private Table table;
 
     public GetGlobalIngredientsQuery(Table table) {
         this.table = table;
     }
 
-    @Override
     public QueryResult execute() {
         // Search for everything with "ingredient" for a partition key.
         QuerySpec spec = new QuerySpec()

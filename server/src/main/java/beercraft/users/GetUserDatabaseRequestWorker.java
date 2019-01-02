@@ -1,6 +1,6 @@
 package beercraft.users;
 
-import beercraft.util.Executable;
+import beercraft.ingredients.GetGlobalIngredientsQuery;
 import beercraft.util.QueryResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -8,16 +8,15 @@ import org.apache.logging.log4j.Logger;
 /**
  * Business logic needed to service GET requests to /users/{userId}/database
  */
-public class GetUserDatabaseRequestWorker implements Executable<QueryResult> {
+public class GetUserDatabaseRequestWorker {
     static final Logger logger = LogManager.getLogger(GetUserDatabaseRequestWorker.class);
 
-    private Executable<QueryResult> globalIngredientsQuery;
+    private GetGlobalIngredientsQuery globalIngredientsQuery;
 
-    public GetUserDatabaseRequestWorker(Executable<QueryResult> globalIngredientsQuery) {
+    public GetUserDatabaseRequestWorker(GetGlobalIngredientsQuery globalIngredientsQuery) {
         this.globalIngredientsQuery = globalIngredientsQuery;
     }
 
-    @Override
     public QueryResult execute() {
         // TODO: Query for user profile with ID from URL
 
