@@ -69,11 +69,19 @@ module.exports = function (plop) {
             name: 'requestWorker',
             message: 'Request worker class name',
             default: getRequestWorkerName
+        },
+        {
+            type: 'list',
+            name: 'useDbMapper',
+            message: 'Database connection type',
+            choices: ['DynamoDbMapper', 'Table'],
+            filter: (x) => x === 'DynamoDbMapper'
         }],
         actions: (answers) => {
             let actions = [];
 
             answers['package'] = getResource(answers);
+            answers['parseRequestBody'] = answers['method'] === 'POST' || answers['method'] === 'PUT' || answers['method'] === 'PATCH';
 
             actions.push({
                 type: 'add',

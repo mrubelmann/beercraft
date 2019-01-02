@@ -1,6 +1,5 @@
 package beercraft.recipes;
 
-import beercraft.util.QueryResult;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -9,11 +8,13 @@ import org.apache.logging.log4j.Logger;
 */
 public class CreateRecipeRequestWorker {
     static final Logger logger = LogManager.getLogger(CreateRecipeRequestWorker.class);
+    private final CreateRecipeQuery createRecipeQuery;
 
-    public CreateRecipeRequestWorker() {
+    public CreateRecipeRequestWorker(CreateRecipeQuery createRecipeQuery) {
+        this.createRecipeQuery = createRecipeQuery;
     }
 
-    public QueryResult execute() {
-        return null;
+    public void execute(Recipe recipe) {
+        this.createRecipeQuery.execute(recipe);
     }
 }

@@ -1,7 +1,12 @@
 package beercraft.{{package}};
 
 import beercraft.util.*;
+{{#if useDbMapper}}
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDB;
+import com.amazonaws.services.dynamodbv2.AmazonDynamoDBClientBuilder;
+{{else}}
 import com.amazonaws.services.dynamodbv2.document.Table;
+{{/if}}
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -16,14 +21,26 @@ public class {{requestHandler}} implements RequestHandler {
      * @param requestData The request body and query parameters
      * @return The response
      */
-    public Response handleRequest(RequestData requestData) {
+    public Response handleRequest(RequestData requestData) {{#if parseRequestBody}}throws IOException {{/if}}{
         logger.debug("{{upperCase method}} /{{path}}");
         logger.debug(String.format("Request data: %s", requestData));
 
         // TODO: Validate input.
+{{#if parseRequestBody}}
+
+        // Parse request body.
+        ObjectMapper mapper = ObjectMapperSingleton.getInstance();
+        // SomeType item = mapper.readValue(requestData.getRequestBody(), SomeType.class);
+{{/if}}
+
+        // Establish database connection.
+{{#if useDbMapper}}
+        AmazonDynamoDB databaseClient = AmazonDynamoDBClientBuilder.defaultClient();
+{{else}}
+        Table table = DynamoDbConnectionFactory.getConnectionToTable("Beercraft");
+{{/if}}
 
         // TODO: Instantiate queries for worker.
-        // Table table = DynamoDbConnectionFactory.getConnectionToTable("Beercraft");
 
         // Run the worker.
         {{requestWorker}} worker = new {{requestWorker}}();

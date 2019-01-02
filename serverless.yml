@@ -38,6 +38,9 @@ functions:
     - http:
         path: recipes
         method: post
+    - http:
+        path: recipes
+        method: post
     # [NEW EVENTS GO HERE]
 
 resources:
