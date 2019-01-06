@@ -9,7 +9,7 @@ public class FermentableBuilder {
     public FermentableBuilder() {
         fermentable = new Fermentable();
         fermentable.setPK("ingredient");
-        fermentable.setSK(RandomData.getString());
+        fermentable.setId(RandomData.getString());
         fermentable.setName(RandomData.getString());
         fermentable.setNotes(RandomData.getString());
         fermentable.setColor(RandomData.getDouble());

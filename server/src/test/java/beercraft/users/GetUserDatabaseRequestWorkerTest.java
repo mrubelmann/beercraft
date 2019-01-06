@@ -24,6 +24,10 @@ class GetUserDatabaseRequestWorkerTest {
 
         ObjectMapper mapper = ObjectMapperSingleton.getInstance();
         Fermentable actualFermentable = mapper.convertValue(queryResult.get(0), Fermentable.class);
+
+        // ObjectMapper doesn't include the partition key.  Let's verify that and also cheat to compare everything else.
+        assertThat(actualFermentable.getPK()).isNull();
+        actualFermentable.setPK(fermentable.getPK());
         assertThat(actualFermentable).isEqualToComparingFieldByField(fermentable);
     }
 
@@ -47,6 +51,11 @@ class GetUserDatabaseRequestWorkerTest {
                 mapper.convertValue(queryResult.get(0), Fermentable.class),
                 mapper.convertValue(queryResult.get(1), Fermentable.class)
         };
+        // ObjectMapper doesn't include the partition key.  Let's verify that and also cheat to compare everything else.
+        assertThat(actualFermentables[0].getPK()).isNull();
+        assertThat(actualFermentables[1].getPK()).isNull();
+        actualFermentables[0].setPK(fermentables[0].getPK());
+        actualFermentables[1].setPK(fermentables[1].getPK());
         assertThat(actualFermentables[0]).isEqualToComparingFieldByField(fermentables[0]);
         assertThat(actualFermentables[1]).isEqualToComparingFieldByField(fermentables[1]);
     }

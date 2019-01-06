@@ -5,7 +5,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
 import java.util.List;
 
-@DynamoDBTable(tableName = "Recipes")
+@DynamoDBTable(tableName = "Beercraft")
 public class Recipe implements DatabaseItem {
     private String pk;
     private String sk;

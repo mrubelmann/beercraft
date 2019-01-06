@@ -2,11 +2,13 @@ package beercraft.ingredients;
 
 import beercraft.util.DatabaseItem;
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-@DynamoDBTable(tableName = "UberTable")
+@DynamoDBTable(tableName = "Beercraft")
 public class Fermentable implements Ingredient, DatabaseItem {
     private String pk;
     private String sk;
+    private String id;
     private String name;
     private String notes;
     private double color;
@@ -23,13 +25,38 @@ public class Fermentable implements Ingredient, DatabaseItem {
     private boolean recommendMash;
     private boolean mashed;
 
+    // The partition key is ignored when serializing to JSON, but included when writing to the database.
     @DynamoDBHashKey
+    @JsonIgnore
     public String getPK() { return pk; }
     public void setPK(String pk) { this.pk = pk; }
 
+    // The sort key is ignored when serializing to JSON, but included when writing to the database.
     @DynamoDBRangeKey
-    public String getSK() { return sk; }
+    @JsonIgnore
+    public String getSK() {
+        // The format of the sort key is "fermentable_[id]".  If sk isn't already set, then we can figure it out from
+        // the id.
+        if(sk == null && id != null) {
+            sk = "fermentable" + id;
+        }
+        return sk;
+    }
     public void setSK(String sk) { this.sk = sk; }
+
+    // The ID is saved in the JSON, but omitted from the database.
+    public String getId() {
+        // The format of the sort key is "fermentable_[id]".  If id isn't already set, then we can figure it out from
+        // the sort key.
+        if(id == null && sk != null) {
+            String[] splitKey = sk.split("_");
+            if(splitKey.length == 2) {
+                id = splitKey[1];
+            }
+        }
+        return id;
+    }
+    public void setId(String id) { this.id = id; }
 
     @DynamoDBAttribute
     public String getName() { return name; }

@@ -15,6 +15,8 @@ public class CreateRecipeRequestWorker {
     }
 
     public void execute(Recipe recipe) {
-        this.createRecipeQuery.execute(recipe);
+        if(recipe != null) {
+            this.createRecipeQuery.execute(recipe);
+        }
     }
 }

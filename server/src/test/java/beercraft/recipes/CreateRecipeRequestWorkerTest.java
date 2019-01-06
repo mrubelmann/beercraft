@@ -15,4 +15,14 @@ public class CreateRecipeRequestWorkerTest {
 
         verify(mockQuery, times(1)).execute(recipe);
     }
+
+    @Test
+    void execute_nullRecipe_recordIsNotCreated() {
+        CreateRecipeQuery mockQuery = mock(CreateRecipeQuery.class);
+
+        CreateRecipeRequestWorker worker = new CreateRecipeRequestWorker(mockQuery);
+        worker.execute(null);
+
+        verify(mockQuery, times(0)).execute(any());
+    }
 }
