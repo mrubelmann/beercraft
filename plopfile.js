@@ -42,7 +42,8 @@ function getResource(answers) {
 }
 
 module.exports = function (plop) {
-    // REST endpoint generator
+
+    // ----- REST endpoint generator -----------------------------------------------------------------------------------
     plop.setGenerator('endpoint', {
         description: 'a new request endpoint',
         prompts: [{
@@ -119,6 +120,35 @@ module.exports = function (plop) {
                 path: 'server/src/main/java/beercraft/Handler.java',
                 template: `import beercraft.{{package}}.{{requestHandler}};
 // [NEW REQUEST HANDLER IMPORTS GO HERE]`
+            });
+
+            return actions;
+        }
+    });
+
+
+    // ----- Query generator -------------------------------------------------------------------------------------------
+    plop.setGenerator('query', {
+        description: 'a new query',
+        prompts: [{
+            type: 'input',
+            name: 'className',
+            message: 'Query class name'
+        },
+        {
+            type: 'input',
+            name: 'package',
+            message: 'package',
+            default: 'beercraft.'
+        }],
+        actions: (answers) => {
+            let actions = [];
+
+            let outputPath = answers['package'].replace('.', '/');
+            actions.push({
+                type: 'add',
+                path: `server/src/main/java/${outputPath}/${answers['className']}.java`,
+                templateFile: 'plop-templates/Query.hbs'
             });
 
             return actions;
