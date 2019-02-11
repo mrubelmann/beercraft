@@ -11,24 +11,26 @@ import org.apache.logging.log4j.Logger;
 public class GetUserDatabaseRequestWorker {
     static final Logger logger = LogManager.getLogger(GetUserDatabaseRequestWorker.class);
 
-    private GetGlobalIngredientsQuery globalIngredientsQuery;
+    private final GetGlobalIngredientsQuery globalIngredientsQuery;
+    private final GetUserQuery getUserQuery;
 
-    public GetUserDatabaseRequestWorker(GetGlobalIngredientsQuery globalIngredientsQuery) {
+    public GetUserDatabaseRequestWorker(GetGlobalIngredientsQuery globalIngredientsQuery, GetUserQuery getUserQuery) {
         this.globalIngredientsQuery = globalIngredientsQuery;
+        this.getUserQuery = getUserQuery;
     }
 
     public QueryResult execute() {
-        // TODO: Query for user profile with ID from URL
+        // Query for all the user's stuff.
+        QueryResult userData = this.getUserQuery.execute();
 
         // Query for shared ingredients
         QueryResult globalIngredients = this.globalIngredientsQuery.execute();
 
-        // TODO: Query for user ingredients
-        // TODO: Query for user recipes
         // TODO: Query for shared equipment
         // TODO: Query for user equipment
 
-        // Return everything we've queried for.
+        // Return everything.
+        userData.addAll(globalIngredients);
         return globalIngredients;
     }
 }

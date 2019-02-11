@@ -22,12 +22,16 @@ public class GetUserDatabaseRequestHandler implements RequestHandler {
         logger.debug(String.format("Request data: %s", requestData));
 
         // TODO: Validate user
+        String userId = requestData.getPathParameters().get("userId");
 
         // Initialize all the queries for the worker to use.
         Table table = DynamoDbConnectionFactory.getConnectionToTable("Beercraft");
 
         // Do it.
-        GetUserDatabaseRequestWorker worker = new GetUserDatabaseRequestWorker(new GetGlobalIngredientsQuery(table));
+        GetUserDatabaseRequestWorker worker = new GetUserDatabaseRequestWorker(
+                new GetGlobalIngredientsQuery(table),
+                new GetUserQuery(table, userId)
+        );
         return new Response(worker.execute());
     }
 }

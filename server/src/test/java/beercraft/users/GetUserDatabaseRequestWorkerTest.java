@@ -2,6 +2,7 @@ package beercraft.users;
 
 import beercraft.builders.FermentableBuilder;
 import beercraft.builders.MockGetGlobalIngredientQueryBuilder;
+import beercraft.builders.MockGetUserQueryBuilder;
 import beercraft.ingredients.Fermentable;
 import beercraft.ingredients.GetGlobalIngredientsQuery;
 import beercraft.util.ObjectMapperSingleton;
@@ -17,8 +18,9 @@ class GetUserDatabaseRequestWorkerTest {
         GetGlobalIngredientsQuery getGlobalIngredientsQuery = new MockGetGlobalIngredientQueryBuilder()
                 .withFermentable(fermentable)
                 .build();
+        GetUserQuery getUserQuery = new MockGetUserQueryBuilder().build();
 
-        GetUserDatabaseRequestWorker worker = new GetUserDatabaseRequestWorker(getGlobalIngredientsQuery);
+        GetUserDatabaseRequestWorker worker = new GetUserDatabaseRequestWorker(getGlobalIngredientsQuery, getUserQuery);
         QueryResult queryResult = worker.execute();
         assertThat(queryResult.size()).isEqualTo(1);
 
@@ -41,8 +43,9 @@ class GetUserDatabaseRequestWorkerTest {
                 .withFermentable(fermentables[0])
                 .withFermentable(fermentables[1])
                 .build();
+        GetUserQuery getUserQuery = new MockGetUserQueryBuilder().build();
 
-        GetUserDatabaseRequestWorker worker = new GetUserDatabaseRequestWorker(getGlobalIngredientsQuery);
+        GetUserDatabaseRequestWorker worker = new GetUserDatabaseRequestWorker(getGlobalIngredientsQuery, getUserQuery);
         QueryResult queryResult = worker.execute();
         assertThat(queryResult.size()).isEqualTo(2);
 
